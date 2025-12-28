@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="150px" height="200px">
+<rect x="0" y="0" width="150" height="200" style="fill:white;stroke:lightgray;stroke-width:1;" />
+
+<path fill="none" stroke="black" id="turtlepath"  d="M 75 190 L 75 90 L 50 46.6987 L 28.3494 34.1987 L 50 46.6987 L 50 21.6987 L 50 46.6987 L 75 90 L 100 46.6987 L 100 21.6987 L 100 46.6987 L 121.651 34.1987 L 100 46.6987 L 75 90 L 75 190"/>
+
+<path id="turtle" fill="red" d="M 10 0 L -10 -8 L -10 8 ">
+  <animateMotion dur="12s" repeatCount="1" rotate="auto">
+  <mpath xlink:href="#turtlepath"/>
+  </animateMotion>
+</path>
+<set xlink:href="#turtle" attributeName="visibility" to="hidden" begin="12s" dur="indefinite" />
+
+</svg>

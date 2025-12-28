@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="200px" height="200px">
+<rect x="0" y="0" width="200" height="200" style="fill:white;stroke:lightgray;stroke-width:1;" />
+
+<path fill="none" stroke="black" id="turtlepath"  d="M 25 175 L 175 175 L 175 25 L 25 25 L 25 175"/>
+
+<path id="turtle" fill="red" d="M 10 0 L -10 -8 L -10 8 ">
+  <animateMotion dur="6s" repeatCount="1" rotate="auto">
+  <mpath xlink:href="#turtlepath"/>
+  </animateMotion>
+</path>
+<set xlink:href="#turtle" attributeName="visibility" to="hidden" begin="6s" dur="indefinite" />
+
+</svg>

@@ -1,0 +1,16 @@
+theme: minima
+exclude: [README.md]
+
+# TODO: zmenit skolsky rok podla potreby
+title: 1-INF-127 Programovanie (1) v C/C++ 2025/26
+short_title: Programovanie
+
+
+lang: sk
+baseurl: "/prog1"
+
+header_pages:
+  - index.md
+  - notes/Uvod.md
+  - notes/Pravidla.md
+  - notes/Softver.md

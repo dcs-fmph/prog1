@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="300px" height="300px">
+<rect x="0" y="0" width="300" height="300" style="fill:white;stroke:lightgray;stroke-width:1;" />
+
+<rect id="item0" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item1" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item2" x="105" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item3" x="120" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item4" x="135" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item5" x="150" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item6" x="165" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item7" x="180" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item8" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item9" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item10" x="90" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item11" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item12" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item13" x="135" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item14" x="150" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item15" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item16" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item17" x="195" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item18" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item19" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item20" x="90" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item21" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item22" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item23" x="135" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item24" x="150" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item25" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item26" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item27" x="195" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item28" x="105" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item29" x="120" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item30" x="135" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item31" x="150" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item32" x="165" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item33" x="180" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item34" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item35" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item36" x="135" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item37" x="150" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item38" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item39" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item40" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item41" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item42" x="105" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item43" x="120" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item44" x="135" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item45" x="150" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item46" x="165" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item47" x="180" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item48" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item49" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item50" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item51" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item52" x="135" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item53" x="150" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item54" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item55" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item56" x="105" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item57" x="120" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item58" x="135" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item59" x="150" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item60" x="165" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item61" x="180" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item62" x="120" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item63" x="135" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item64" x="150" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item65" x="165" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item66" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item67" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item68" x="135" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item69" x="150" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item70" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item71" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item72" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item73" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item74" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item75" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item76" x="135" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item77" x="150" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item78" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item79" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item80" x="120" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item81" x="135" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item82" x="150" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item83" x="165" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item84" x="135" y="75" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item85" x="150" y="75" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item86" x="105" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item87" x="120" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item88" x="135" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item89" x="150" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item90" x="165" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item91" x="180" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item92" x="90" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item93" x="105" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item94" x="120" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item95" x="135" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item96" x="150" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item97" x="165" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item98" x="180" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item99" x="195" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item100" x="75" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item101" x="90" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item102" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item103" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item104" x="135" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item105" x="150" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item106" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item107" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item108" x="195" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item109" x="210" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item110" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item111" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item112" x="75" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item113" x="90" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item114" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item115" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item116" x="135" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item117" x="150" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item118" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item119" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item120" x="195" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item121" x="210" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item122" x="90" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item123" x="105" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item124" x="120" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item125" x="135" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item126" x="150" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item127" x="165" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item128" x="180" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item129" x="195" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item130" x="105" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item131" x="120" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item132" x="135" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item133" x="150" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item134" x="165" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item135" x="180" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item136" x="135" y="195" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item137" x="150" y="195" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item138" x="135" y="75" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item139" x="150" y="75" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item140" x="105" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item141" x="180" y="90" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item142" x="90" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item143" x="195" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item144" x="60" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item145" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item146" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item147" x="225" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item148" x="90" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item149" x="195" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item150" x="105" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item151" x="180" y="180" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item152" x="135" y="195" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item153" x="150" y="195" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item154" x="75" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item155" x="210" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item156" x="60" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item157" x="75" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item158" x="90" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item159" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item160" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item161" x="195" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item162" x="210" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item163" x="225" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item164" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item165" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item166" x="105" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item167" x="180" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item168" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item169" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item170" x="60" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item171" x="75" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item172" x="90" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item173" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item174" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item175" x="195" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item176" x="210" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item177" x="225" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item178" x="75" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item179" x="210" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item180" x="45" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item181" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item182" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item183" x="120" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item184" x="165" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item185" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item186" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item187" x="240" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item188" x="45" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item189" x="60" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item190" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item191" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item192" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item193" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item194" x="225" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item195" x="240" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item196" x="60" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item197" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item198" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item199" x="105" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item200" x="180" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item201" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item202" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item203" x="225" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item204" x="45" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item205" x="60" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item206" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item207" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item208" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item209" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item210" x="225" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item211" x="240" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item212" x="75" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item213" x="90" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item214" x="195" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item215" x="210" y="105" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item216" x="45" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item217" x="60" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item218" x="105" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item219" x="120" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item220" x="165" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item221" x="180" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item222" x="225" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item223" x="240" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item224" x="30" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item225" x="60" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item226" x="105" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item227" x="135" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item228" x="150" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item229" x="180" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item230" x="225" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item231" x="255" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item232" x="45" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item233" x="60" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item234" x="105" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item235" x="120" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item236" x="165" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item237" x="180" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item238" x="225" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item239" x="240" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item240" x="75" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item241" x="90" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item242" x="195" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item243" x="210" y="165" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item244" x="135" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item245" x="150" y="120" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item246" x="30" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item247" x="45" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item248" x="75" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item249" x="90" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item250" x="120" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item251" x="165" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item252" x="195" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item253" x="210" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item254" x="240" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item255" x="255" y="135" width="15" height="15" style="stroke:white;stroke-width:1;fill:white" />
+<rect id="item256" x="135" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<rect id="item257" x="150" y="150" width="15" height="15" style="stroke:white;stroke-width:1;fill:black" />
+<set xlink:href="#item10" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item11" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item12" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item13" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item14" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item15" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item16" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item17" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item18" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item19" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item20" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item21" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item22" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item23" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item24" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item25" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item26" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item27" attributeName="visibility" to="hidden" begin="0s" dur="1s" />
+<set xlink:href="#item28" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item29" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item30" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item31" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item32" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item33" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item34" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item35" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item36" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item37" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item38" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item39" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item40" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item41" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item42" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item43" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item44" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item45" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item46" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item47" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item48" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item49" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item50" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item51" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item52" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item53" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item54" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item55" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item56" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item57" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item58" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item59" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item60" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item61" attributeName="visibility" to="hidden" begin="0s" dur="2s" />
+<set xlink:href="#item62" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item63" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item64" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item65" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item66" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item67" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item68" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item69" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item70" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item71" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item72" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item73" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item74" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item75" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item76" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item77" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item78" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item79" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item80" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item81" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item82" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item83" attributeName="visibility" to="hidden" begin="0s" dur="3s" />
+<set xlink:href="#item84" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item85" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item86" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item87" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item88" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item89" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item90" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item91" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item92" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item93" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item94" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item95" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item96" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item97" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item98" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item99" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item100" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item101" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item102" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item103" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item104" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item105" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item106" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item107" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item108" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item109" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item110" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item111" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item112" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item113" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item114" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item115" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item116" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item117" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item118" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item119" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item120" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item121" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item122" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item123" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item124" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item125" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item126" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item127" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item128" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item129" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item130" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item131" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item132" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item133" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item134" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item135" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item136" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item137" attributeName="visibility" to="hidden" begin="0s" dur="4s" />
+<set xlink:href="#item138" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item139" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item140" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item141" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item142" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item143" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item144" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item145" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item146" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item147" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item148" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item149" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item150" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item151" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item152" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item153" attributeName="visibility" to="hidden" begin="0s" dur="5s" />
+<set xlink:href="#item154" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item155" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item156" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item157" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item158" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item159" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item160" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item161" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item162" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item163" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item164" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item165" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item166" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item167" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item168" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item169" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item170" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item171" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item172" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item173" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item174" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item175" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item176" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item177" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item178" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item179" attributeName="visibility" to="hidden" begin="0s" dur="6s" />
+<set xlink:href="#item180" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item181" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item182" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item183" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item184" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item185" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item186" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item187" attributeName="visibility" to="hidden" begin="0s" dur="7s" />
+<set xlink:href="#item188" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item189" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item190" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item191" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item192" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item193" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item194" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item195" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item196" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item197" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item198" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item199" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item200" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item201" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item202" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item203" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item204" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item205" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item206" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item207" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item208" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item209" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item210" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item211" attributeName="visibility" to="hidden" begin="0s" dur="8s" />
+<set xlink:href="#item212" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item213" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item214" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item215" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item216" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item217" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item218" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item219" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item220" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item221" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item222" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item223" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item224" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item225" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item226" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item227" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item228" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item229" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item230" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item231" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item232" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item233" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item234" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item235" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item236" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item237" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item238" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item239" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item240" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item241" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item242" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item243" attributeName="visibility" to="hidden" begin="0s" dur="9s" />
+<set xlink:href="#item244" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item245" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item246" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item247" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item248" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item249" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item250" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item251" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item252" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item253" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item254" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item255" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item256" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+<set xlink:href="#item257" attributeName="visibility" to="hidden" begin="0s" dur="10s" />
+</svg>
