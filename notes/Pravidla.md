@@ -28,13 +28,7 @@ získateľných bodov v danej aktivite.
   - Ak niektorú z týchto podmienok nesplníte, dostávate známku Fx.
   - V prípade úspešného absolvovania predmetu získate známku podľa bodov
     v celkovom hodnotení takto:
-
-<!-- end list -->
-
-  - 
-    
-      -   
-        A: 90% a viac, B:80...89%, C: 70...79%, D: 60...69%, E: 50...59%
+      - A: 90% a viac, B:80...89%, C: 70...79%, D: 60...69%, E: 50...59%
 
 ## Cvičné príklady cez semester
 
@@ -51,7 +45,7 @@ získateľných bodov v danej aktivite.
       - Ak chcete získať body za rozcvičku, je potrebné byť počas
         príslušného cvičenia fyzicky na cvičení v počítačovej učebni.
 
-<!-- end list -->
+
 
   - **Ďalšie príklady z testovača** môžete riešiť v ľubovoľnom čase a na
     ľubovoľnom mieste (do termínu odovzdania), odporúčame vám však
