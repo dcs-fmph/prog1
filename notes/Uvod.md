@@ -6,9 +6,8 @@ title: Úvod
 
 **Rozvrh**
 
-  - Prednášky: pondelok 9:50 F1 a streda 9:50 F1
-  - Hlavné cvičenia: utorok 9:50 I-H6
-  - Doplnkové cvičenia: streda 16:30 I-H6
+  - Prednášky: pondelok 9:00-10:30 F2 a streda 9:50-11:20 F1
+  - Cvičenia: pondelok 14:50 I-H6 a utorok 9:50 I-H6
 
 **Vyučujú**
 
@@ -31,8 +30,8 @@ alebo kto má práve čas.
   - Naučiť sa algoritmicky uvažovať, písať kratšie programy a hľadať v
     nich chyby, porozumieť existujúcemu kódu
   - Oboznámiť sa so základnými programovými a dátovými štruktúrami
-    jazyka C resp. C++, nie je však nutne so všetkými črtami týchto
-    jazykov
+    jazyka C, nie je však nutne so všetkými črtami tohto
+    jazyka
       - Cykly, podmienky, premenné a ich typy, funkcie a odovzdávanie
         parametrov, polia, smerníky, reťazce, súbory
   - Oboznámiť sa s niektorými základnými algoritmami a dátovými
@@ -40,8 +39,69 @@ alebo kto má práve čas.
       - Triedenia, spájané zoznamy, hašovacie tabuľky, stromy,
         aritmetické výrazy, rad a zásobník, rekurzia, prehľadávanie,
         vyfarbovanie
-  - Aj štruktúry, ktoré sú hotové v C++ knižniciach, si budeme
+  - V malej miere si ukážeme aj niektoré črty jazyka C++.
+  - Aj štruktúry, ktoré sú hotové v C++ a iných jazykoch, si budeme
     programovať sami, aby sme videli, čo sa za nimi skrýva
+
+## Priebeh semestra
+
+  - Na **prednáškach** budeme preberať obsah predmetu. Prednášky budú
+    2x2 vyučovacie hodiny do týždňa.
+  - **Cvičenia** budú 2x2 vyučovacie hodiny do týždňa v
+    počítačovej učebni a ich cieľom je aktívne si precvičiť učivo.
+    Hlavnou náplňou cvičenia je riešenie zadaných príkladov pri počítači alebo na papieri.
+    Cvičiaci vám podľa potreby pomôžu a poradia.
+  - Niektoré príklady bude možné dokončiť aj doma alebo na ďalších cvičeniach.
+  - Cvičné príklady navrhujeme tak, aby vám ich riešenie pomohlo
+    precvičiť si učivo, čím sa okrem iného pripravujete aj na záverečnú
+    skúšku. Okrem tohto sú za tieto príklady body do záverečného
+    hodnotenia. Najviac sa naučíte, ak sa vám príklad podarí samostatne
+    vyriešiť, ale ak sa vám to napriek vášmu úsiliu nedarí, neváhajte sa
+    spýtať o pomoc vyučujúcich. Možno s malou radou od nás sa Vám podarí
+    úlohu spraviť.
+  - Cieľom vyučujúcich tohto predmetu je vás čo najviac naučiť, ale
+    musíte aj vy byť aktívni partneri. Ak vám na prednáške alebo
+    cvičení nie je niečo jasné, spýtajte sa. V prípade problémov
+    si môžete dohodnúť konzultáciu. Môžete nám klásť tiež otázky emailom. Ak sa dostanete
+    do väčších problémov s plnením študijných povinností, poraďte sa s
+    vyučujúcimi alebo s tútorom, ako tieto problémy riešiť.
+
+## Umelá inteligencia
+
+- Umelá inteligencia (AI) zvládne vyriešiť všetky príklady na tomto predmete.
+- Pre pokročilých programátorov je skvelým pomocníkom na zrýchlenie práce.
+- Ale na škole nie ste preto, aby ste niečo konkrétne naprogramovali, ale aby
+  ste sa zlepšili v rôznych zručnostiach ako abstraktné myslenie,
+  presné vyjadrovanie, kreatívne riešenie úloh a podobne. 
+- Na to je potrebné, aby ste riešili zadané úlohy samostatne, bez použitia AI, a tým sa zlepšovali.
+- **Nepoužívajte umelú inteligenciu na riešenie zadaných úloh,**
+  môže však byť **užitočná na iné účely**, napríklad vysvetľovanie nejasných častí učiva,
+  skritizovanie vašich programov, po tom ako ste ich odovzdali,
+  alebo generovanie ďalších cvičných zadaní.
+- Obľúbené prirovnanie: Použitie AI na riešenie domácich úloh je ako zdvíhanie činiek
+  vo fitku vysokozdvižným vozíkom, po angicky "using a forklift in the gym"
+
+## Celkové odporúčania
+
+Prichádzajúci študenti v prvom ročníku majú veľmi rôznu úroveň znalosti
+programovania, v závislosti od toho, koľko sa mu venovali na strednej
+škole. Preto pre niektorých môže byť tento predmet veľmi ľahký, pre
+iných veľmi ťažký. Môže sa to zdať nespravodlivé, ale pokročilí
+študenti už nad programovaním strávili dlhé hodiny a začiatočníci ich
+bez určitej námahy nedobehnú. Veľmi radi vám však pomôžeme prekonať
+nástrahy tohto predmetu. Tu sú naše odporúčania podľa toho, aké
+znalosti už máte na začiatku semestra. Učebnú látku možno zhruba
+rozdeliť na základné programovacie konštrukty jazyka C a
+základné algoritmy, ktoré sa budú počas semestra striedať.
+
+|                                                                                                                                                                  |                                                |                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Úroveň znalostí**                                                                                                                                              | **Náročnosť látky: základy programovania v C** | **Náročnosť látky: algoritmy, rekurzia** | **Odporúčanie**                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Programovať viem len málo alebo vôbec**                                                                                                                        | ťažké                                          | ťažké                                    | Dôležité je začať usilovne pracovať už od začiatku semestra. Odporúčame chodiť aj na doplnkové cvičenia, ďalšie príklady riešiť doma. Neváhajte sa nás spýtať, ak vám niečo nie je jasné.                                                                                                                                                                                                                                                                |
+| **Som skúsený programátor, ale neovládam C**                                                                                                             | ľahké                                          | ťažké                                    | Aj keď prvé prednášky sa vám môžu zdať ľahké, sledujte učebnú látku, aby sa nestalo, že ste sa niektorými dôležitými vecami ešte nestretli. Nezabudnite riešiť príklady z cvičení a domáce úlohy. Hlavne ale nezaspite na vavrínoch: už po pár týždňoch začneme preberať algoritmy a rekurziu, čo môžu byť pre vás ťažšie témy. Treba preto zamakať aj na tomto predmete a v prípade, že vám učivo robí problémy, neváhajte prísť na doplnkové cvičenia. |
+| **Som skúsený programátor a ovládam C**                                                                                                                | viem                                           | ťažké                                    | Podobne ako predchádzajúci riadok. Môžete si prípadne skúsiť napísať test pre pokročilých, môže sa vám podariť preskočiť zopár cvičení.                                                                                                                                                                                                                                                                                                                  |
+| **Som skúsený programátor a ovládam aj rekurziu a základné algoritmy** (napr. z programátorských súťaží alebo rozšírenej výučby programovania na strednej škole) | ľahké/viem                                     | ľahké/viem                               | Aby ste sa nenudili riešením ľahkých príkladov, odporúčame test pre pokročilých. Aj tak však treba odovzdať domáce úlohy a absolvovať skúšku, prípadne aj semestrálny test. Priebežne sledujte učivo a v prípade nejasností sa pýtajte.                                                                                                                                                                                                                  |
+
 
 ## Literatúra
 
@@ -57,58 +117,7 @@ alebo kto má práve čas.
         2008, I-INF-P-26
       - Sedgewick: Algorithms in C. Parts 1-4 I-INF-S-43/I-IV
       - Kochan: Programming in C, 2005 D-INF-K-7a
-  - Referenčnú príručku k jazyku C++ nájdete napríklad na tejto
-    webstránke: <http://cplusplus.com/>
+  - Referenčnú príručku k jazykom C a C++ nájdete napríklad na tejto
+    webstránke: <https://cppreference.com/c>
   - Môže vás zaujímať aj [video prednášok](./Video.md) z iných
     škôl v angličtine
-
-## Priebeh semestra
-
-  - Na **prednáškach** budeme preberať obsah predmetu. Prednášky budú
-    štyri vyučovacie hodiny do týždňa.
-  - **Hlavné cvičenia** budú dve vyučovacie hodiny do týždňa v
-    počítačovej učebni a ich cieľom je aktívne si precvičiť učivo.
-    Hlavnou náplňou cvičenia je riešenie zadaných príkladov. Cvičiaci
-    vám podľa potreby pomôžu a poradia.
-  - Príklady z hlavných cvičení, ktoré nestihnete vyriešiť, môžete
-    dokončiť doma alebo na doplnkových cvičeniach.
-  - Okrem toho sa každý týždeň konajú **doplnkové cvičenia** (tiež dve
-    vyučovacie hodiny). Na tomto cvičení s pomocou cvičiacich môžete
-    dokončovať príklady z predchádzajúcich cvičení a pýtať sa otázky k
-    učivu. Odporúčame hlavne pre študentov, pre ktorých je študijná
-    látka náročná.
-  - Cvičné príklady navrhujeme tak, aby vám ich riešenie pomohlo
-    precvičiť si učivo, čím sa okrem iného pripravujete aj na záverečnú
-    skúšku. Okrem tohto sú za tieto príklady body do záverečného
-    hodnotenia. Najviac sa naučíte, ak sa vám príklad podarí samostatne
-    vyriešiť, ale ak sa vám to napriek vášmu úsiliu nedarí, neváhajte sa
-    spýtať o pomoc vyučujúcich. Možno s malou radou od nás sa Vám podarí
-    úlohu spraviť.
-  - Cieľom vyučujúcich tohto predmetu je vás čo najviac naučiť, ale
-    musíte aj vy byť aktívni partneri. Ak vám na prednáške alebo
-    cvičení nie je niečo jasné, spýtajte sa. V prípade problémov
-    odporúčame navštíviť doplnkové cvičenia, alebo si dohodnúť
-    konzultáciu. Môžete nám klásť tiež otázky emailom. Ak sa dostanete
-    do väčších problémov s plnením študijných povinností, poraďte sa s
-    vyučujúcimi alebo s tútorom, ako tieto problémy riešiť.
-
-## Celkové odporúčania
-
-Prichádzajúci študenti v prvom ročníku majú veľmi rôznu úroveň znalosti
-programovania, v závislosti od toho, koľko sa mu venovali na strednej
-škole. Preto pre niektorých môže byť tento predmet veľmi ľahký, pre
-iných veľmi ťažký. Môže sa to zdať nespravodlivé, ale pokročilí
-študenti už nad programovaním strávili dlhé hodiny a začiatočníci ich
-bez určitej námahy nedobehnú. Veľmi radi vám však pomôžeme prekonať
-nástrahy tohto predmetu. Tu sú naše odporúčania podľa toho, aké
-znalosti už máte na začiatku semestra. Učebnú látku možno zhruba
-rozdeliť na základné programovacie konštrukty jazyka C resp. C++ a
-základné algoritmy, ktoré sa budú počas semestra striedať.
-
-|                                                                                                                                                                  |                                                |                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Úroveň znalostí**                                                                                                                                              | **Náročnosť látky: základy programovania v C** | **Náročnosť látky: algoritmy, rekurzia** | **Odporúčanie**                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Programovať viem len málo alebo vôbec**                                                                                                                        | ťažké                                          | ťažké                                    | Dôležité je začať usilovne pracovať už od začiatku semestra. Odporúčame chodiť aj na doplnkové cvičenia, ďalšie príklady riešiť doma. Neváhajte sa nás spýtať, ak vám niečo nie je jasné.                                                                                                                                                                                                                                                                |
-| **Som skúsený programátor, ale neovládam C ani C++**                                                                                                             | ľahké                                          | ťažké                                    | Aj keď prvé prednášky sa vám môžu zdať ľahké, sledujte učebnú látku, aby sa nestalo, že ste sa niektorými dôležitými vecami ešte nestretli. Nezabudnite riešiť príklady z cvičení a domáce úlohy. Hlavne ale nezaspite na vavrínoch: už po pár týždňoch začneme preberať algoritmy a rekurziu, čo môžu byť pre vás ťažšie témy. Treba preto zamakať aj na tomto predmete a v prípade, že vám učivo robí problémy, neváhajte prísť na doplnkové cvičenia. |
-| **Som skúsený programátor a ovládam C alebo C++**                                                                                                                | viem                                           | ťažké                                    | Podobne ako predchádzajúci riadok. Môžete si prípadne skúsiť napísať test pre pokročilých, môže sa vám podariť preskočiť zopár cvičení.                                                                                                                                                                                                                                                                                                                  |
-| **Som skúsený programátor a ovládam aj rekurziu a základné algoritmy** (napr. z programátorských súťaží alebo rozšírenej výučby programovania na strednej škole) | ľahké/viem                                     | ľahké/viem                               | Aby ste sa nenudili riešením ľahkých príkladov, odporúčame test pre pokročilých. Aj tak však treba odovzdať domáce úlohy a absolvovať skúšku, prípadne aj semestrálny test. Priebežne sledujte učivo a v prípade nejasností sa pýtajte.                                                                                                                                                                                                                  |

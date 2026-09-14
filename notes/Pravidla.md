@@ -39,30 +39,22 @@ získateľných bodov v danej aktivite.
   - Každá úloha má uvedený termín odovzdania. Pokiaľ vám vyučujúci
     neudelia výnimku, hodnotia sa iba príklady odovzdané do tohto
     termínu.
-  - Jeden príklad, označený ako **rozcvička**, bude mať termín
-    odovzdania počas hlavného cvičenia, neskôr teda zaňho body
-    nedostanete.
-      - Ak chcete získať body za rozcvičku, je potrebné byť počas
-        príslušného cvičenia fyzicky na cvičení v počítačovej učebni.
-
-
-
+  - Príklady označené ako **rozcvička** je potrebné riešiť počas cvičenia,
+    priamo v počítačovej učebni. Dodržujte ďalšie pokyny od cvičiacich
+    a v zadaní (povolený softvér a pod.)
   - **Ďalšie príklady z testovača** môžete riešiť v ľubovoľnom čase a na
     ľubovoľnom mieste (do termínu odovzdania), odporúčame vám však
     využiť cvičenia, kde vám môžeme poradiť v prípade problémov.
-  - Na niektorých prednáškach alebo cvičeniach budú **papierové
-    rozcvičky**, kde budete riešiť príklady na papieri. Body za tieto
+  - Na niektorých cvičeniach budú **papierové rozcvičky**, kde budete riešiť
+    príklady na papieri. Body za tieto
     príklady sa spočítavajú s príkladmi z testovača.
-  - Na **doplnkovom cvičení** bude spravidla zadaná ešte jedna rozcvička
-    za malý počet bonusových bodov, ktorú tiež môžete riešiť iba na
-    cvičení.
-  - Na doplnkovom cvičení môžu cvičiaci udeliť bonusové body aj za
-    ďalšie aktivity.
+  - Takisto sa môžu na cvičeniach diať ďalšie bodované aktivity,
+    napríklad práca v skupinách a podobne.
 
 ## Semestrálne testy
 
-  - Počas semestra budú dva testy písané na papier, 5.11. a 10.12. o
-    18:10 v posluchárňach A a B. 
+  - Počas semestra budú dva testy písané na papier. Prvý bude 28.10. o
+    18:10 v posluchárňach F1 a F2. Dátum druhého ešte určíme, môže byť aj v skúškovom období.
   - Spolu za tieto testy potrebujete získať polovicu z maximálneho
     možného počtu bodov.
   - Opravný test bude cez skúškové obdobie (v januári).
@@ -79,11 +71,12 @@ získateľných bodov v danej aktivite.
 
 ## Neprítomnosť a opravné termíny
 
-  - V prípade, že máte príznaky infekčného ochorenia (horúčka, kašeľ,
-    hnačka a pod.), nechoďte na fakultu, aby ste chorobu nešírili.
-  - Silne odporúčame účasť na prednáškach aj cvičeniach, prípadnú
-    neúčasť však nemusíte ospravedlňovať. Neúčasťou na cvičeniach
-    stratíte body za rozcvičku, môžete však riešiť ostatné príklady.
+  - Účasť na prednáškach odporúčame, prípadnú neúčasť však nemusíte ospravdlňovať.
+    Preštudujte si oznamy a preberané učivo.
+  - Účasť na cvičení je povinná, v prípade neospravedlnenej
+    neúčasti strácate body za rozcvičky a iné aktivity na cvičení.
+    Tieto body môžete stratiť aj keď bez povolenia odídete z cvičenia predčasne,
+    nevenujete sa predmetu alebo neposlúchate pokyny cvičiacich.
   - Ak zo závažných dôvodov (napr. zdravotných) nemôžete prísť na
     cvičenia, písomku, skúšku resp. načas odovzdať cvičné príklady na
     testovači, **kontaktujte vyučujúcich emailom**, môžu vám určiť
@@ -109,24 +102,17 @@ získateľných bodov v danej aktivite.
     s popisom programovacieho jazyka, nesnažte sa však nájsť priamo
     riešenie zadaného príkladu.
   - Pri riešení cvičných príkladov **nepoužívajte ani nástroje umelej
-    inteligencie (AI)**. Sú dobrým pomocníkom pre pokročilých
-    programátorov, avšak teraz potrebujete zvládnuť základy
-    programovania vy sami. Ak sú takéto nástroje súčasťou vášho editora,
+    inteligencie (AI)**. Ak sú takéto nástroje súčasťou vášho editora,
     vypnite ich pri práci na našich príkladoch.
   - Počas testov a skúšok môžete používať iba povolené pomôcky a
     nesmiete komunikovať so žiadnymi osobami okrem vyučujúcich.
-
-<!-- end list -->
-
-  - **Po termíne odovzdania** príslušnej úlohy je povolené a môže byť aj
+  - **Po termíne odovzdania** príslušnej úlohy je povolené a môže byť 
     poučné porovnať váš program s programami, ktoré napísali spolužiaci
     alebo systémy AI.
-
-<!-- end list -->
-
   - Odovzdané programy môžu byť kontrolované softvérom na detekciu
     plagiarizmu.
-  - Ak nájdeme prípady odpisovania, všetci zúčastnení študenti získajú
+  - Ak nájdeme prípady odpisovania alebo použitia AI,
+    všetci zúčastnení študenti získajú
     za príslušný príklad **0 bodov (aj študenti, ktorí dali spolužiakom
     odpísať**).
   - Za závažné porušenie pravidiel budeme považovať aj akýkoľvek pokus
@@ -137,12 +123,12 @@ získateľných bodov v danej aktivite.
     **podviedli hlavne sami seba**, lebo ste nevyužili príležitosť
     trénovať dôležité zručnosti, ktoré vám budú neskôr chýbať.
 
-## Osobné stretnutia
+## Prezentovanie odovzdaných úloh
 
-  - Vyučujúci vás môžu vyzvať emailom, aby ste prišli na stretnutie
+  - Vyučujúci vás môžu vyzvať, aby ste prišli na stretnutie
     ohľadom príkladov, ktoré odovzdali.
   - Na tomto stretnutí im vysvetlíte, ako ste príklad riešili.
-  - Stretnutia sa budú konať počas doplnkových cvičení alebo po dohode v
+  - Stretnutia sa budú konať počas cvičení alebo po dohode v
     inom čase.
   - Ak na stretnutie neprídete alebo nebudete vedieť svoj program
     vysvetliť, stratíte zaňho body.
@@ -154,7 +140,7 @@ získateľných bodov v danej aktivite.
     učiva. Jeho úspešným absolvovaním si môžu ušetriť časť povinností
     na predmete.
   - Za každých celých získaných 9% z testu získavate 100% bodov z
-    cvičných príkladov zadaných v jednom týždni semestra (bez
+    cvičných príkladov a iných aktivít zadaných v jednom týždni semestra (bez
     bonusov). Na tieto uznané cvičenia nemusíte prísť ani príklady
     riešiť doma. Napr. ak ste získali aspoň 63% z testu, dostanete
     plný počet bodov z cvičných príkladov zadaných v prvých 7 týždňov
@@ -170,8 +156,8 @@ získateľných bodov v danej aktivite.
 
 ## Nepreberané črty jazykov C a C++
 
-  - Z jazykov C a C++ uvidíme len malú časť.
-  - Preberané črty týchto jazykov je potrebné ovládať, pre vlastnú
+  - Väčšinu semestra budeme používať jazyk C.
+  - Preberané črty tohto jazyka je potrebné ovládať, pre vlastnú
     potrebu si však môžete v literatúre doštudovať aj ďalšie užitočné
     príkazy, knižnice a konštrukty.
   - Ak je v zadaní uvedené, aké prostriedky máte použiť, držte sa týchto
@@ -179,9 +165,6 @@ získateľných bodov v danej aktivite.
   - V opačnom prípade môžete použiť aj nepreberané črty. Aby ste sa
     vyhli problémom pri opravovaní, je vhodné ich doplniť vysvetľujúcim
     komentárom.
-  - Vždy používajte len štandardné súčasti jazykov C a C++ , nie
-    špeciálne knižnice. (Výnimkou sú samozrejme knižnice poskytnuté
-    vyučujúcimi.)
   - Vaše programy by mali fungovať na testovači bez zvláštnych nastavení
-    kompilátora a pod.
-
+    kompilátora, špeciálnych knižníc a pod.
+  - V niektorých úlohách môže byť povolené alebo vyžadované aj použitie jazyka C++.
