@@ -3,6 +3,7 @@
      <li><strong>Týždeň {{ week.date }}</strong> {{ week.content }}<br />
      {% assign first_item = 1 %}
      {%- for item in week.items -%}
+       {%- if item.display == 0 %} {% continue %} {% endif -%}
        {%- if first_item != 1 %} · {% endif -%}
        {% assign first_item = 0 %}
        {%- if item.type == "notes" -%}
