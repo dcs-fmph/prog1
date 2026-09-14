@@ -71,10 +71,10 @@ získateľných bodov v danej aktivite.
 
 ## Neprítomnosť a opravné termíny
 
-  - Účasť na prednáškach odporúčame, prípadnú neúčasť však nemusíte ospravdlňovať.
+  - Účasť na prednáškach odporúčame, prípadnú neúčasť však nemusíte ospravedlňovať.
     Preštudujte si oznamy a preberané učivo.
   - Účasť na cvičení je povinná, v prípade neospravedlnenej
-    neúčasti strácate body za rozcvičky a iné aktivity na cvičení.
+    neúčasti **strácate body za rozcvičky** a iné aktivity na cvičení.
     Tieto body môžete stratiť aj keď bez povolenia odídete z cvičenia predčasne,
     nevenujete sa predmetu alebo neposlúchate pokyny cvičiacich.
   - Ak zo závažných dôvodov (napr. zdravotných) nemôžete prísť na
@@ -82,7 +82,7 @@ získateľných bodov v danej aktivite.
     testovači, **kontaktujte vyučujúcich emailom**, môžu vám určiť
     alternatívne termíny. Treba tak spraviť **čím skôr**, nie až spätne
     cez skúškové.
-  - **Semestrálny test** má jeden **opravný termín**, pričom sa bude
+  - **Semestrálne testy** majú jeden **opravný termín**, pričom sa bude
     písať jeden dlhší test zodpovedajúci obidvom semestrálnym testom.
       - Ak sa zúčastníte opravného termínu, strácate body z riadnych
         termínov, aj keby ste na opravnom získali menej bodov.
