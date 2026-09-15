@@ -7,9 +7,9 @@ title: Zimný semester, test pre pokročilých
 
 ## Konanie, prihlasovanie
 
-  - Test pre pokročilých bude v **stredu 24.9.2025 o 18:10 v posluchárni
+  - Test pre pokročilých bude v **stredu 23.9.2026 o 18:10 v posluchárni
     A**.
-  - V prípade záujmu o test sa **prihláste do utorka 23.9. večer** cez
+  - V prípade záujmu o test sa **prihláste do utorka 22.9. večer** cez
     [formulár](https://forms.gle/1gnRNUVDX8QaBajn7).
   - Ak chcete na test prísť a máte s týmto časom konflikt, dajte nám
     vedieť čím skôr.
