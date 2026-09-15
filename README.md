@@ -23,7 +23,7 @@ Stránka predmetu Programovanie (1) v C/C++
   * Items have field `type` which can be `notes` if it is an `.md` file in `notes` folder, or `file` if it is a file in `files` folder, `text` for just a text or `url` for a link to external website
   * Field `name` of an item is the visible text
   * Field `file` is the filename. For notes, extension `.md` is added automatically, but for files it should be included. For URL the full URL should be given here. For type `text`, this field is ignored.
-  * Field `display` is 1 if the itam should be displayed or 0 otherwise
+  * Field `display` is 1 if the item should be displayed or 0 otherwise
 
 ## Documentation
 
