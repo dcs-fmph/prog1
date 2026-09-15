@@ -17,11 +17,12 @@ title: Zimný semester, test pre pokročilých
 ## Príprava a pomôcky
 
   - Ako prípravu si môžete pozrieť [ukážky príkladov z archívu
-    predmetu](./Test2.md)
+    predmetu](./Test2.html)
     a [ukážkový test](../files/Pisomka-pokrocili2020.pdf).
   - Na test si môžete priniesť ťahák v rozsahu jedného listu (dvoch
     strán) A4.
   - Pracovať budete na papieri, bez počítača.
+  - Môžete používať príkazy z jazykov C alebo C++.
   - Prineste si pero a ISIC, odpovede píšete priamo do zadania.
   - Je zakázané používať akékoľvek elektronické pomôcky (mobil, hodinky,
     slúchadlá) a komunikovať s inými osobami než s vyučujúcimi.

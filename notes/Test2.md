@@ -5,6 +5,7 @@ title: Zimný semester, semestrálny test
 * TOC
 {:toc}
 
+{% if false %}
   - Druhý semestrálny test sa bude konať v stredu **10.12. o 18:10** v
     posluchárňach A a B v trvaní 45 minút.
   - Z obidvoch testov spolu treba získať aspoň 50% bodov, inak známka
@@ -22,14 +23,14 @@ title: Zimný semester, semestrálny test
   - Po opustení miestnosti nebude možné vrátiť sa a pokračovať v písaní
     testu.
 
-<!-- end list -->
-
   - Ak máte problémy so slovenčinou, môžeme vám na teste a skúške
     poskytnúť strojový preklad zadaní. Prípadný záujem nahláste do
     pondelka 8.12. pomocou
     [formulára](https://forms.office.com/Pages/ResponsePage.aspx?id=jUcxznpu50yGcKW51RiE-fk1X-AjVvpHm_pTPiHlkYlURjBHTFY3R0dNVktGWlExTjhYTksyNFZCNS4u).
     Ak ste už formulár vyplnili pred prvým testom, nemusíte ho vypĺňať
     znovu.
+
+{% endif %}
 
 Na semestrálnom teste budú podobné typy príkladov, aké poznáte z
 teoretických cvičení, napríklad
