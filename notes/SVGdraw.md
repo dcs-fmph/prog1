@@ -2,6 +2,10 @@
 title: SVGdraw
 ---
 
+Obsah stránky pripravujeme.
+
+{% if false %}
+
 * TOC
 {:toc}
 
@@ -64,3 +68,5 @@ korytnačky znázornený ako červený trojuholník a za sebou bude nechávať
     `turnRight` ju otočia.
   - Príkaz `setSpeed` umožňuje zmeniť rýchlosť korytnačky, aby sme
     lepšie videli, ako sa postupne hýbe.
+
+{% endif %}

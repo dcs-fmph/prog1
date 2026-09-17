@@ -7,12 +7,11 @@ Príklady z cvičení, domácich úloh, ale aj na záverečnej skúške budete
 odovzdávať na stránke **<https://prog.dcs.fmph.uniba.sk/>**, ktorá
 bude súčasne mnohé z vašich riešení aj testovať.
 
-  - Na stránku sa prihláste heslom, ktoré dostanete na prvých
-    cvičeniach, po prihlásení si ho zmeňte.
+  - Na stránku sa prihláste heslom, ktoré dostanete emailom, po prihlásení si ho zmeňte.
   - Na testovači uvidíte zoznam príkladov, spolu s ich zadaniami v pdf
     formáte a s ďalšími potrebnými súbormi (napr. kostra programu,
     príklady vstupu)
-  - Vaše programy môžete odovzdať buď zvolením súboru s programom (.cpp)
+  - Vaše programy môžete odovzdať buď zvolením súboru s programom (.c)
     z disku alebo nakopírovaním programu do textového poľa.
   - Váš program sa uloží na testovači a môžete si neskôr skontrolovať,
     či ste odovzdali správnu verziu.
@@ -56,8 +55,8 @@ bude súčasne mnohé z vašich riešení aj testovať.
 ## Poznámka o vstupe a výstupe
 
   - Ak v zadaní nie je povedané inak, všetok vstup načítavajte z konzoly
-    príkazmi `cin` (prípadne `scanf` a pod.) a vypisujte na konzolu príkazmi
-    `cout` (prípadne `printf` a pod.)
+    (väčšinou príkazom `scanf`) a vypisujte na konzolu (väčšinou príkazom
+    `printf`).
   - Vstup uvedený v zadaní má testovač v súbore a [presmeruje
     ho](https://cs.wikipedia.org/wiki/P%C5%99esm%C4%9Brov%C3%A1n%C3%AD)
     vášmu programu na konzolu, t.j. správa sa podobne, ako keby niekto
@@ -82,4 +81,4 @@ Please enter the first number: Please enter the second number: 10+3=13
 ## Nastavenia kompilátora
 
   - Vaše programy kompilujeme pomocou gcc 9.4.0 s nastaveniami `g++
-    -static -std=gnu++17 -O2 -Wall -Wextra`
+    -static -lm -std=gnu17 -O2 -Wall -Wextra`
