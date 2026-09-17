@@ -22,7 +22,7 @@ weeks:
       - {display: 0, type: text, name: 'Cvičenia 2'}
      
   - date: '5.-11.10.'
-    content: 'Teoretické cvičenie, polia, struct'
+    content: 'Struct, polia'
     items:
       - {display: 0, type: notes, file: P5, name: 'Prednáška 5'}
       - {display: 0, type: url, file: 'https://youtu.be/Uml5x1K8CJU', name: 'video s koncom prednášky'}

@@ -79,7 +79,7 @@ alebo kto má práve čas.
   skritizovanie vašich programov, po tom ako ste ich odovzdali,
   alebo generovanie ďalších cvičných zadaní.
 - Obľúbené prirovnanie: Použitie AI na riešenie domácich úloh je ako zdvíhanie činiek
-  vo fitku vysokozdvižným vozíkom, po angicky "using a forklift in the gym"
+  vo fitku vysokozdvižným vozíkom, po anglicky "using a forklift in the gym"
 
 ## Celkové odporúčania
 
@@ -88,8 +88,7 @@ programovania, v závislosti od toho, koľko sa mu venovali na strednej
 škole. Preto pre niektorých môže byť tento predmet veľmi ľahký, pre
 iných veľmi ťažký. Môže sa to zdať nespravodlivé, ale pokročilí
 študenti už nad programovaním strávili dlhé hodiny a začiatočníci ich
-bez určitej námahy nedobehnú. Veľmi radi vám však pomôžeme prekonať
-nástrahy tohto predmetu. Tu sú naše odporúčania podľa toho, aké
+bez určitej námahy nedobehnú. Tu sú naše odporúčania podľa toho, aké
 znalosti už máte na začiatku semestra. Učebnú látku možno zhruba
 rozdeliť na základné programovacie konštrukty jazyka C a
 základné algoritmy, ktoré sa budú počas semestra striedať.
