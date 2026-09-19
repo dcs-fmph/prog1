@@ -80,5 +80,5 @@ Please enter the first number: Please enter the second number: 10+3=13
 
 ## Nastavenia kompilátora
 
-  - Vaše programy kompilujeme pomocou gcc 9.4.0 s nastaveniami `g++
+  - Vaše programy kompilujeme pomocou gcc 11.4.0 s nastaveniami `gcc
     -static -lm -std=gnu17 -O2 -Wall -Wextra`
