@@ -35,7 +35,7 @@ praktické.
 
 ### Ako na môj prvý program
 
-Na [tejto](link) stránke nájdete návod na:
+Na [tejto stránke](/prog1/files/first-c-program.sk.html) nájdete návod na:
 
   - inštaláciu potrebného softvéru (textové editory, kompilátor, ...)
       - Na počítačoch na fakulte je samozrejme už všetko potrebné nainštalované.

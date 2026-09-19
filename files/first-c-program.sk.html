@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skompilujte svoj prvý program v C</title>
+
+<!--
+  MECHANICS (no JavaScript):
+  - Show/hide: each choice is a hidden <input type="radio">. CSS reads :checked
+    and uses "~" (following-sibling) to reveal the matching panel. Radios,
+    chooser and panels are siblings inside .tutorial.
+  - Theme colour: body:has(#os-linux:checked) / :has(#os-win:checked) flips the
+    --accent variable (red for Linux, blue for Windows). It inherits into every
+    panel, badge and control.
+  - "Check it" blocks are native <details> elements: collapsed until clicked.
+-->
+
+<style>
+  /***** tokens — recoloured to the prog1 course palette *****/
+  /* Course identity: dark red #a01010 (headings) + dark navy #212e72 (links/code).
+     The OS switch is kept, but its two accent poles now use the course colours:
+     Linux -> course red, Windows -> course navy. */
+  :root { --border:#e2e2e6; --accent:#a01010; --accent-weak:#f6e9e9; --cmt:#998877; }
+  body:has(#os-linux:checked) { --accent:#a01010; --accent-weak:#f6e9e9; } /* Linux   -> course red  */
+  body:has(#os-win:checked)   { --accent:#212e72; --accent-weak:#e8ebf4; } /* Windows -> course navy */
+
+  /***** palette + base (Bootstrap-4-like, to match prog1) *****/
+  * { box-sizing: border-box; }
+  body {
+    color:#212529; background-color:#FFFFFF;
+    margin:0; padding:0; overflow:hidden; height:100vh;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:1rem; text-align:left; line-height:1.5;
+  }
+  p { margin:.5rem 0; }
+  h1 { font-size:1.8rem; line-height:1.3; color:#a01010; padding:48px 0 0 0; margin:0; }
+  h2 { font-size:1.5rem; line-height:1.3; color:#a01010; padding:24px 0 0 0; margin:0; }
+  h3 { font-size:1.25rem; line-height:1.3; color:#212e72; margin:1rem 0 .3rem; }
+  a          { text-decoration:none; color:#212e72; }
+  a:hover    { text-decoration:underline; }
+  a:visited  { color:#343d69; }
+  span.link  { font-weight:normal; font-variant-caps:small-caps; font-size:x-large; }
+  /* course signature: emphasis + inline code render in navy */
+  strong, b, em, i { color:#212e72; }
+
+  /***** layout (master / wrapper / aside / main) — unchanged *****/
+  div.master  { display:flex; flex-direction:row; justify-content:center; width:100%; height:100%; }
+  div.wrapper { display:flex; height:100%; width:100%; }
+  div.wrapper > #dummy_gap1 { flex:1 0 0px; }
+  div.wrapper > aside       { flex:0 0 23em; padding:0 10px; }
+  div.wrapper > #dummy_gap2 { flex:0.125 0 40px; }
+  div.wrapper > main        { flex:1 1 54em; min-width:0; overflow-y:auto; scrollbar-gutter:stable; padding:0 10px 5em 10px; }
+  div.wrapper > main > .scrolling_main { display:flex; flex-direction:row; justify-content:flex-start; }
+  div.wrapper > main > .scrolling_main > .scrolling_main_body { max-width:54em; width:100%; min-width:0; }
+
+  /***** sidebar *****/
+  nav.toc { margin-top:1.4em; }
+  nav.toc .toc-label { display:block; font-variant-caps:small-caps; color:#606060; font-size:1.05em; margin-bottom:.2em; }
+  nav.toc ol { margin:0 0 0 1em; padding-left:1.2em; }
+  nav.toc li { margin:.15em 0; }
+  nav.toc ul.toc-bonus { list-style:none; margin:.15em 0 0; padding-left:1.2em; }
+  nav.toc ul.toc-bonus li { margin:.15em 0; }
+  nav.toc ul.toc-bonus li::before { content:"*"; color:var(--accent); font-weight:bold; margin-right:.45em; }
+  details.collapse-section ul { margin:.4rem 0; padding-left:1.4em; text-align:left; }
+  details.collapse-section li { margin:.2em 0; }
+  h1 .langswitch { font-size:.8em; font-weight:normal; white-space:nowrap; }
+  h1 .langswitch a { color:#212e72; }
+
+  /***** code + terminal output (GitHub / rouge-like) *****/
+  code, .out {
+    font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  }
+  code { background:#f6f8fa; border-radius:4px; padding:.06em .35em; font-size:.92em; color:#212e72; }
+  pre {
+    background:#f6f8fa; border:1px solid var(--border); border-radius:6px;
+    padding:12px 14px; overflow-x:auto; margin:.6rem 0; text-align:left; color:#24292e;
+  }
+  pre code { background:none; padding:0; color:inherit; }
+  pre.term { background:#fbfbfc; border-left:3px solid var(--accent); }  /* captured output (fallback) */
+  /* command/output blocks (inside a chooser panel, or an .os-only bonus block) take an
+     OS-flavoured terminal skin; plain source-code listings elsewhere stay on the light style */
+  body:has(#os-win:checked) .panel pre, body:has(#os-win:checked) .os-only pre {
+    background:#012456; color:#f2f2f2; border-color:#012456;               /* PowerShell blue   */
+  }
+  body:has(#os-linux:checked) .panel pre, body:has(#os-linux:checked) .os-only pre {
+    background:#0c0c0c; color:#cccccc; border-color:#0c0c0c;               /* classic grey-on-black bash */
+  }
+  body:has(#os-win:checked)   .panel pre .cmt, body:has(#os-win:checked)   .os-only pre .cmt { color:#8ea9e8; }  /* comment tint, readable on navy */
+  body:has(#os-linux:checked) .panel pre .cmt, body:has(#os-linux:checked) .os-only pre .cmt { color:#6a9955; }  /* comment tint, readable on black */
+  .cmt { color:var(--cmt); font-style:italic; }                          /* code comments, rouge-grey */
+  .out { background:var(--accent-weak); border-radius:4px; padding:.05em .4em; color:#24292e; }  /* inline output */
+  .note {
+    border-left:3px solid var(--accent); background:var(--accent-weak); color:#404040;
+    padding:.5rem .8rem; border-radius:0 6px 6px 0; margin:.7rem 0;
+  }
+  .lead   { color:#606060; }
+  .footer { color:#606060; font-size:.9rem; border-top:1px solid #a0a0a0; padding-top:20px; margin-top:2rem; }
+  hr { border:none; border-top:1px solid var(--border); margin:1.8rem 0; }
+
+  /***** hidden state radios (kept focusable) *****/
+  .state {
+    position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0;
+    overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;
+  }
+
+  /***** sticky chooser *****/
+  .controls {
+    position:sticky; top:0; z-index:2;
+    display:flex; flex-wrap:wrap; gap:18px;
+    background:#FFFFFF; border:1px solid var(--border); border-radius:8px;
+    padding:12px 14px; margin:14px 0 4px;
+  }
+  .group { display:flex; flex-direction:column; gap:8px; }
+  .group-label { font-variant-caps:small-caps; color:#606060; font-size:.95em; }
+  .pills { display:flex; gap:8px; flex-wrap:wrap; }
+  .controls label {
+    display:inline-block; padding:6px 14px; border:1px solid #d0d0d5;
+    border-radius:999px; background:#FFFFFF; color:#212529; cursor:pointer;
+    user-select:none; font-size:.95em;
+  }
+  .controls label:hover { border-color:var(--accent); }
+  #os-linux:checked ~ .controls label[for="os-linux"],
+  #os-win:checked   ~ .controls label[for="os-win"] {
+    background:var(--accent); border-color:var(--accent); color:#FFFFFF;
+  }
+  /* Method picker: greyed (neutral), not OS-coloured */
+  #type-kate:checked   ~ .controls label[for="type-kate"],
+  #type-manual:checked ~ .controls label[for="type-manual"] {
+    background:#6b6b73; border-color:#6b6b73; color:#FFFFFF;
+  }
+  #os-linux:focus-visible ~ .controls label[for="os-linux"],
+  #os-win:focus-visible   ~ .controls label[for="os-win"],
+  #type-kate:focus-visible   ~ .controls label[for="type-kate"],
+  #type-manual:focus-visible ~ .controls label[for="type-manual"] {
+    outline:3px solid var(--accent); outline-offset:2px;
+  }
+  /* compact distro picker, placed inside the Install section (small height, same font-size) */
+  .distro-pick { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:.1rem 0 .6rem; }
+  .distro-pick .distro-pick-label { font-variant-caps:small-caps; color:#606060; margin-right:.2em; }
+  .distro-pick label {
+    padding:1px 9px; border:1px solid #d0d0d5; border-radius:999px;
+    background:#FFFFFF; color:#212529; cursor:pointer; user-select:none;
+  }
+  .distro-pick label:hover { border-color:var(--accent); }
+  body:has(#distro-debian:checked) .distro-pick label[for="distro-debian"],
+  body:has(#distro-fedora:checked) .distro-pick label[for="distro-fedora"],
+  body:has(#distro-arch:checked)   .distro-pick label[for="distro-arch"] {
+    background:var(--accent); border-color:var(--accent); color:#FFFFFF;
+  }
+  body:has(#distro-debian:focus-visible) .distro-pick label[for="distro-debian"],
+  body:has(#distro-fedora:focus-visible) .distro-pick label[for="distro-fedora"],
+  body:has(#distro-arch:focus-visible)   .distro-pick label[for="distro-arch"] {
+    outline:3px solid var(--accent); outline-offset:2px;
+  }
+
+  /***** section headings *****/
+  .section-h { scroll-margin-top:70px; }
+  /* plain inline number in the heading colour — no red pill */
+  .section-h .num {
+    display:inline; background:none; color:inherit; font-size:inherit;
+    font-weight:bold; padding:0; border-radius:0;
+    vertical-align:baseline; margin-right:.35em;
+  }
+  /***** collapsible section (Adding Math library) *****/
+  details.collapse-section { scroll-margin-top:70px; }
+  details.collapse-section > summary {
+    cursor:pointer; list-style:none; font-weight:bold; color:#a01010;
+    font-size:1.5rem; line-height:1.3; padding:24px 0 0 0;
+  }
+  details.collapse-section > summary::-webkit-details-marker { display:none; }
+  /* triangle sits where the * badge was: inverted (white box, accent border) */
+  details.collapse-section > summary::before {
+    content:"\25B8"; display:inline-block;
+    color:var(--accent); background:#FFFFFF; border:2px solid var(--accent);
+    border-radius:6px; font-size:.72em; line-height:1; padding:2px 9px;
+    margin-right:.45em; vertical-align:middle;
+  }
+  details.collapse-section[open] > summary::before { content:"\25BE"; }
+
+  /***** panels *****/
+  .panel { display:none; }
+  .panel {
+    border:1px solid var(--border); border-top:3px solid #212e72;
+    border-radius:8px; background:#f8f9fa; padding:6px 16px 14px; margin-top:.6rem;
+  }
+
+  /***** collapsible "Check it" *****/
+  details.check { border:1px solid var(--border); border-radius:6px; background:#FFFFFF; margin:.7rem 0 0; }
+  details.check > summary {
+    cursor:pointer; padding:.45rem .7rem; font-variant-caps:small-caps; font-weight:bold;
+    color:var(--accent); list-style:none;
+  }
+  details.check > summary::-webkit-details-marker { display:none; }
+  details.check > summary::before { content:"\25B8"; margin-right:.5em; }        /* triangle right */
+  details.check[open] > summary::before { content:"\25BE"; }                     /* triangle down  */
+  details.check[open] > summary { border-bottom:1px solid var(--border); }
+  details.check .check-body { padding:.3rem .8rem .6rem; }
+  details.check .check-body ul { margin:.3rem 0; padding-left:1.4em; text-align:left; }
+
+  /***** show-rules (which panel for which choice) — unchanged mechanics *****/
+  #os-linux:checked ~ .panel--install-linux { display:block; }
+  #os-win:checked   ~ .panel--install-win   { display:block; }
+  #type-kate:checked                       ~ .panel--write-kate         { display:block; }
+  #os-linux:checked ~ #type-manual:checked ~ .panel--write-linux-manual { display:block; }
+  #os-win:checked   ~ #type-manual:checked ~ .panel--write-win-manual   { display:block; }
+  #os-linux:checked ~ #type-kate:checked   ~ .panel--compile-linux-kate   { display:block; }
+  #os-linux:checked ~ #type-manual:checked ~ .panel--compile-linux-manual { display:block; }
+  #os-win:checked   ~ #type-kate:checked   ~ .panel--compile-win-kate     { display:block; }
+  #os-win:checked   ~ #type-manual:checked ~ .panel--compile-win-manual   { display:block; }
+  /* distro-specific install commands, inside the Linux install panel */
+  .distro-cmd { display:none; }
+  body:has(#distro-debian:checked) .distro-cmd--debian { display:block; }
+  body:has(#distro-fedora:checked) .distro-cmd--fedora { display:block; }
+  body:has(#distro-arch:checked)   .distro-cmd--arch   { display:block; }
+  /* OS-specific blocks used in the bonus sections */
+  .os-only { display:none; }
+  body:has(#os-linux:checked) .os-only--linux { display:block; }
+  body:has(#os-win:checked)   .os-only--win   { display:block; }
+
+  /***** responsive *****/
+  @media (max-width:900px) {
+    body { overflow:auto; height:auto; }
+    div.master, div.wrapper { height:auto; }
+    div.wrapper { flex-direction:column; }
+    div.wrapper > main { overflow-y:visible; }
+    div.wrapper > aside { flex-basis:auto; }
+    div.wrapper > #dummy_gap1, div.wrapper > #dummy_gap2 { display:none; }
+  }
+  @media (max-width:768px) {
+    nav.toc ol { padding-left:14px; }
+  }
+</style>
+</head>
+
+<body>
+<div class="master">
+<div class="wrapper">
+  <div id="dummy_gap1"></div>
+
+  <aside>
+    <h1>Prvý program v&nbsp;C&nbsp; <span class="langswitch"><a href="./first-c-program.sk.html"><strong>[SK]</strong></a> <a href="./first-c-program.en.html">[EN]</a></span></h1>
+    <nav class="toc">
+      <span class="toc-label">Obsah</span>
+      <ol start="0">
+        <li><a href="#install">Inštalácia</a></li>
+        <li><a href="#write">Napísanie</a></li>
+        <li><a href="#compile">Kompilácia a spustenie</a></li>
+      </ol>
+      <ul class="toc-bonus">
+        <li><a href="#math">Pridanie matematickej knižnice</a></li>
+        <li><a href="#svgdraw">Grafická knižnica SVGdraw</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div id="dummy_gap2"></div>
+
+  <main>
+  <div class="scrolling_main">
+  <div class="scrolling_main_body">
+
+    <!-- ===== TUTORIAL: radios + chooser + panels are siblings ===== -->
+    <div class="tutorial">
+
+      <input class="state" type="radio" name="os"   id="os-linux"  checked>
+      <input class="state" type="radio" name="os"   id="os-win">
+      <input class="state" type="radio" name="type" id="type-kate">
+      <input class="state" type="radio" name="type" id="type-manual" checked>
+
+      <div class="controls">
+        <div class="group">
+          <span class="group-label">Operačný systém</span>
+          <div class="pills">
+            <label for="os-linux">Linux (KDE)</label>
+            <label for="os-win">Windows</label>
+          </div>
+        </div>
+        <div class="group">
+          <span class="group-label">Spôsob</span>
+          <div class="pills">
+            <label for="type-manual">Manuálne (terminál)</label>
+            <label for="type-kate">V editore Kate</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 0. INSTALL ===== -->
+      <h2 class="section-h" id="install"><span class="num">0</span>Inštalácia</h2>
+
+      <section class="panel panel--install-linux">
+        <input class="state" type="radio" name="distro" id="distro-debian" checked>
+        <input class="state" type="radio" name="distro" id="distro-fedora">
+        <input class="state" type="radio" name="distro" id="distro-arch">
+        <div class="distro-pick">
+          <span class="distro-pick-label">Distribúcia</span>
+          <label for="distro-debian">Debian / Ubuntu</label>
+          <label for="distro-fedora">Fedora / RHEL</label>
+          <label for="distro-arch">Arch</label>
+        </div>
+        <p>Nainštalujte nástroje (gcc&nbsp;+&nbsp;make) a editory:</p>
+        <div class="distro-cmd distro-cmd--debian">
+<pre><code>sudo apt install build-essential   <span class="cmt"># gcc, make, libc headre</span>
+sudo apt install kate vim nano     <span class="cmt"># editory</span></code></pre>
+        </div>
+        <div class="distro-cmd distro-cmd--fedora">
+<pre><code>sudo dnf install gcc make          <span class="cmt"># prekladač + make</span>
+sudo dnf install kate vim nano     <span class="cmt"># editory</span></code></pre>
+        </div>
+        <div class="distro-cmd distro-cmd--arch">
+<pre><code>sudo pacman -S base-devel          <span class="cmt"># skupina gcc, make, binutils</span>
+sudo pacman -S kate vim nano       <span class="cmt"># editory</span></code></pre>
+        </div>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Overte, že sa <code>gcc</code> nájde v <code>PATH</code>:</p>
+<pre><code>gcc --version</code></pre>
+            <p>Očakávaný výstup (presná verzia sa líši):</p>
+<pre class="term"><code>gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.</code></pre>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel panel--install-win">
+        <p>Nainštalujte gcc (zostava MinGW-w64 od WinLibs):</p>
+        <ol>
+          <li><a href="https://winlibs.com" rel="noopener">winlibs.com</a> &rarr; <strong>Release versions</strong> &rarr; najnovšia <strong>UCRT</strong>, <strong>Win64</strong> &rarr; stiahnite <strong>Zip</strong>.</li>
+          <li>Rozbaľte; vnútorný priečinok <code>mingw64</code> presuňte do <code>C:\mingw64</code> (cesta bez medzier).</li>
+          <li>Otvorte štartmenu, a píšte <em>Upraviť systémové premenné prostredia</em> &rarr; <strong>Premenné prostredia&hellip;</strong> &rarr; <strong>Používateľské premenné</strong> &rarr; <strong>PATH</strong> &rarr; <strong>Upraviť</strong> &rarr; <strong>Nový</strong> &rarr; <code>C:\mingw64\bin</code>.</li>
+        </ol>
+        <p>Nainštalujte editor Kate (<a href="https://apps.microsoft.com/detail/9NWMW7BB59HW?hl=en-us&gl=SK&ocid=pdpshare" rel="noopener">cez MS Store</a>, alebo cez príkaz v Powershell) alebo Notepad++ (<a href="https://notepad-plus-plus.org" rel="noopener">web</a>), PSPad (<a href="https://www.pspad.com" rel="noopener">web</a>).</p>
+<pre><code>winget install KDE.Kate            <span class="cmt"># Powershell</span></code></pre>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Otvorte <strong>nový</strong> PowerShell (relácia spustená pred úpravou PATH ju <strong>neuvidí</strong>) a spustite:</p>
+<pre><code>gcc --version</code></pre>
+            <p>Očakávaný výstup (riadok zostavy MinGW-w64; presná verzia sa líši):</p>
+<pre class="term"><code>gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders) 16.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.</code></pre>
+            <p><code>gcc : The term 'gcc' is not recognized</code> &rarr; <code>bin</code> nie je v <code>PATH</code>, alebo bola relácia spustená pred úpravou.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ===== 1. WRITE ===== -->
+      <h2 class="section-h" id="write"><span class="num">1</span>Napísanie</h2>
+<pre><code>#include &lt;stdio.h&gt;
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}</code></pre>
+
+      <section class="panel panel--write-kate">
+        <p>Tento vzorový zdrojový kód napíšte v editore Kate a uložte ako <code>program.c</code>. <br> Na základe koncovky <code>.c</code> bude Kate správne zvýrazňovať syntax.</p>
+      </section>
+
+      <section class="panel panel--write-linux-manual">
+        <p>Tento vzorový zdrojový kód napíšte v editore Kate, vim alebo nano a uložte ako <code>program.c</code>.<br> Na základe koncovky <code>.c</code> bude editor správne zvýrazňovať syntax.</p>
+<pre><code>vim program.c        <span class="cmt"># i = vloženie (písanie), Esc (koniec písania), :wq = uložiť a ukončiť</span></code></pre>
+<pre><code>nano program.c       <span class="cmt"># píšte, Ctrl+O Enter = uložiť, Ctrl+X = ukončiť</span></code></pre>
+      </section>
+
+      <section class="panel panel--write-win-manual">
+        <p>Tento vzorový zdrojový kód napíšte v editore Kate, Notepad++ alebo PSPad a uložte ako <code>program.c</code>.<br> Na základe koncovky <code>.c</code> bude editor správne zvýrazňovať syntax.</p>
+        <div class="note">Pri ukladaní zvoľte <strong>Uložiť ako typ = Všetky súbory (*.*)</strong>; inak pribudne <code>.txt</code> a <code>gcc</code> súbor <code>program.c</code> nenájde.</div>
+      </section>
+
+      <!-- ===== 2. COMPILE & RUN ===== -->
+      <h2 class="section-h" id="compile"><span class="num">2</span>Kompilácia a spustenie</h2>
+
+      <section class="panel panel--compile-linux-kate">
+        <p>Terminál raz zapnite: <strong>Nastavenia &rarr; Nastaviť Kate &rarr; Terminálový panel</strong> (zaškrtnite <em>Automaticky synchronizovať aktuálnu kartu terminálu s aktuálnym dokumentom</em>).<br>
+        Stlačte <strong>F4</strong> (alebo kliknite na ikonu terminálu), potom:</p>
+<pre><code>gcc -Wall program.c -o program    <span class="cmt"># -Wall = zapne varovania</span>
+./program                         <span class="cmt"># spustí ho z aktuálneho priečinka</span></code></pre>
+        <!--<p>Alternatíva: zabudované pravidlo <code>make</code> pre súbory <code>.c</code>:</p>
+<pre><code>make program CFLAGS=-Wall
+./program</code></pre>-->
+        <details class="check">
+          <summary>Vysvetlenie príkazu gcc</summary>
+          <div class="check-body">
+            <p>V príkaze <code>gcc -Wall program.c -o program</code>:</p>
+            <ul>
+              <li><code>-Wall</code>: zapne bežné varovania prekladača; <code>-Wextra</code> pridá ďalšie užitočné.</li>
+              <li><code>program.c</code>: zdrojový súbor na preklad, zadaný ako argument príkazového riadka.</li>
+              <li><code>-o program</code>: určuje názov výstupného súboru; bez <code>-o</code> je predvolený názov <code>a.out</code>.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Očakávaný výstup programu:</p>
+<pre class="term"><code>Hello, world!</code></pre>
+            <p>Úspešná kompilácia nič nevypíše. Overte návratový kód:</p>
+<pre><code>echo $?                 <span class="cmt"># 0 = úspech</span></code></pre>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel panel--compile-linux-manual">
+        <p>Priečinok s programom otvorte v <strong>Prieskumníkovi</strong>, kliknite pravým a zvoľte <strong>Open in Terminal</strong>. Potom spustite:</p>
+<pre><code>gcc -Wall program.c -o program
+./program</code></pre>
+        <!--<p>Alternatíva: zabudované pravidlo <code>make</code> pre súbory <code>.c</code>, netreba <code>Makefile</code>:</p>
+<pre><code>make program CFLAGS=-Wall
+./program</code></pre>-->
+        <details class="check">
+          <summary>Vysvetlenie príkazu gcc</summary>
+          <div class="check-body">
+            <p>V príkaze <code>gcc -Wall program.c -o program</code>:</p>
+            <ul>
+              <li><code>-Wall</code>: zapne bežné varovania prekladača; <code>-Wextra</code> pridá ďalšie užitočné.</li>
+              <li><code>program.c</code>: zdrojový súbor na preklad, zadaný ako argument príkazového riadka.</li>
+              <li><code>-o program</code>: určuje názov výstupného súboru; bez <code>-o</code> je predvolený názov <code>a.out</code>.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Očakávaný výstup programu:</p>
+<pre class="term"><code>Hello, world!</code></pre>
+            <p>Návratový kód:</p>
+<pre><code>echo $?                 <span class="cmt"># 0 = úspech</span></code></pre>
+            <p><code>gcc: command not found</code> &rarr; skontrolujte že ste nainštalovali <code>gcc</code> správne (0. Install).. <br>
+			<code>No such file or directory</code> &rarr; nesprávny priečinok (<code>ls</code>, potom <code>cd</code>).</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel panel--compile-win-kate">
+        <p>Terminál raz zapnite: <strong>Nastavenia &rarr; Nastaviť Kate &rarr; Terminál</strong>. (zaškrtnite <em>Automaticky synchronizovať aktuálnu kartu terminálu s aktuálnym dokumentom</em>)<br>
+        Stlačte <strong>F4</strong> (alebo kliknite na ikonu terminálu), potom:</p>
+<pre><code>gcc -Wall program.c -o program.exe    <span class="cmt"># -Wall = zapne varovania</span>
+.\program.exe                         <span class="cmt"># úvodné .\ spustí lokálny súbor</span></code></pre>
+        <details class="check">
+          <summary>Vysvetlenie príkazu gcc</summary>
+          <div class="check-body">
+            <p>V príkaze <code>gcc -Wall program.c -o program</code>:</p>
+            <ul>
+              <li><code>-Wall</code>: zapne bežné varovania prekladača; <code>-Wextra</code> pridá ďalšie užitočné.</li>
+              <li><code>program.c</code>: zdrojový súbor na preklad, zadaný ako argument príkazového riadka.</li>
+              <li><code>-o program</code>: určuje názov výstupného súboru; gcc pridá <code>.exe</code>, takže vznikne <code>program.exe</code>. Bez <code>-o</code> je predvolený názov <code>a.exe</code>.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Očakávaný výstup programu:</p>
+<pre class="term"><code>Hello, world!</code></pre>
+            <p>Návratový kód (PowerShell):</p>
+<pre><code>$LASTEXITCODE               <span class="cmt"># 0 = úspech</span></code></pre>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel panel--compile-win-manual">
+        <p>Priečinok s programom otvorte v <strong>Prieskumníkovi</strong>, do panela s adresou napíšte <code>powershell</code> a stlačte Enter. Shell sa otvorí v tomto priečinku. Potom:</p>
+<pre><code>gcc -Wall program.c -o program.exe
+.\program.exe</code></pre>
+        <details class="check">
+          <summary>Vysvetlenie príkazu gcc</summary>
+          <div class="check-body">
+            <p>V príkaze <code>gcc -Wall program.c -o program</code>:</p>
+            <ul>
+              <li><code>-Wall</code>: zapne bežné varovania prekladača; <code>-Wextra</code> pridá ďalšie užitočné.</li>
+              <li><code>program.c</code>: zdrojový súbor na preklad, zadaný ako argument príkazového riadka.</li>
+              <li><code>-o program</code>: určuje názov výstupného súboru; gcc pridá <code>.exe</code>, takže vznikne <code>program.exe</code>. Bez <code>-o</code> je predvolený názov <code>a.exe</code>.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="check">
+          <summary>Skontrolujte</summary>
+          <div class="check-body">
+            <p>Očakávaný výstup programu:</p>
+<pre class="term"><code>Hello, world!</code></pre>
+            <p>Návratový kód:</p>
+<pre><code>$LASTEXITCODE               <span class="cmt"># 0 = úspech</span></code></pre>
+            <p><code>gcc : ... not recognized</code> &rarr; <code>bin</code> nie je v <code>PATH</code>. <code>cannot find path ...program.c</code> &rarr; nesprávny priečinok, alebo je súbor <code>program.c.txt</code>.</p>
+          </div>
+        </details>
+      </section>
+
+    <hr>
+
+    </div>
+    <!-- ===== /TUTORIAL ===== -->
+
+    <details class="collapse-section" id="math">
+      <summary>Pridanie matematickej knižnice (<code>-lm</code>)</summary>
+    <p>Zdrojové súbory s <code>&lt;math.h&gt;</code> vyžadujú pri linkovaní na Linuxe matematickú knižnicu. Príklad, uložte ako <code>root.c</code>:</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char **argv)
+{
+    double x = (argc &gt; 1) ? atof(argv[1]) : 16.0;
+    printf("sqrt(%.2f) = %.4f\n", x, sqrt(x));
+    return 0;
+}</code></pre>
+    <p>Skompilujte s <code>-lm</code> <em>za</em> zdrojovým súborom (linker vyhodnocuje zľava doprava):</p>
+    <div class="os-only os-only--linux">
+<pre><code>gcc -Wall root.c -lm -o root
+./root 81          <span class="cmt"># sqrt(81.00) = 9.0000</span></code></pre>
+    </div>
+    <div class="os-only os-only--win">
+<pre><code>gcc -Wall root.c -lm -o root.exe
+.\root.exe 81      <span class="cmt"># sqrt(81.00) = 9.0000</span></code></pre>
+    </div>
+    </details>
+
+
+    <details class="collapse-section" id="svgdraw">
+      <summary>Grafická knižnica SVGdraw</summary>
+      <h3>Príprava</h3>
+      <ul>
+        <li>Stiahnite si knižnicu z <a href="https://example.com" rel="noopener">example.com</a>.</li>
+        <li>Stiahnuté súbory <code>SVGdraw.cpp</code> a <code>SVGdraw.h</code> uložte do priečinka, v ktorom máte svoje programy.</li>
+      </ul>
+
+	  <h3>Working with the SVGdraw graphics library</h3>
+	  <p>Keď používate grafickú knižnicu SVGdraw, do vlastného programu na začiatok pridajte riadok <code>#include "SVGdraw.h"</code>.</li>
+<pre><code>#include "SVGdraw.h"
+
+int main(void) {
+  /* Vytvor obrázok s rozmermi 200x300 pixelov a ulož ho do súboru domcek1.svg */
+  SVGdraw drawing;
+  SVGdraw_init(&drawing, 200, 300, "domcek1.svg");
+
+  /* Nakresli obdĺžnik (štvorec) s ľavým horným rohom v 50, 150 a šírkou aj dĺžkou 100. */
+  SVGdraw_drawRectangle(&drawing, 50, 150, 100, 100);
+
+  /* Prečiarkni štvorec dvomi čiarami po uhlopriečke. */
+  SVGdraw_drawLine(&drawing, 50, 250, 150, 150);
+  SVGdraw_drawLine(&drawing, 50, 150, 150, 250);
+
+  /* Nakresli strechu ako dve čiary. */
+  SVGdraw_drawLine(&drawing, 50, 150, 100, 50);
+  SVGdraw_drawLine(&drawing, 150, 150, 100, 50);
+
+  /* Ukonči vypisovanie obrázka. */
+  SVGdraw_finish(&drawing);
+
+  return 0;
+}</code></pre>
+      <p>Kompilujte so súborom <code>SVGdraw.c</code>, a nezabudnite pridať prepínač <code>-lm</code> (pretože <code>SVGdraw.c</code> používa <code>math.h</code>):</p>
+      <div class="os-only os-only--linux">
+<pre><code>gcc prog.c SVGdraw.c -lm -o prog
+./prog            <span class="cmt"># .svg obrázok domčeka vytvorený v priečinku vedľa programu</span></code></pre>
+      </div>
+      <div class="os-only os-only--win">
+<pre><code>gcc prog.c SVGdraw.c -lm -o prog
+.\prog            <span class="cmt"># .svg obrázok domčeka vytvorený v priečinku vedľa programu</span></code></pre>
+      </div>
+      <p>Súbor s príponou <code>.svg</code> si môžete pozrieť napríklad v internetových prehliadačoch Firefox alebo Chromium.</li></p>
+    </details>
+
+  </div>
+  </div>
+  </main>
+</div>
+</div>
+</body>
+</html>
