@@ -27,8 +27,8 @@ na Linuxe). Iné textové editory, ktoré môžete použiť:
 
 ### Kompilovanie a spúšťanie programov
 
-Na kompilovanie a spúšťanie programov budeme používať terminál (Linux)
-respektíve powershell (Windows). Ak používate editor Kate, je možné
+Na kompilovanie a spúšťanie programov budeme používať terminál (v Linuxe)
+respektíve powershell (vo Windows). Ak používate editor Kate, je možné
 otvoriť terminál/powershell priamo v okne editora, čo vie byť veľmi
 praktické.
 
@@ -62,10 +62,12 @@ Môžete používať aj iné nástroje, ale silno odporúčame používať nejak
 
 Okrem jednoduchých editorov ako Kate existujú aj zložitejšie prostredia,
 ktoré podporujú prácu programátora, najmä na väčších projektoch. Zvyknú
-sa nazývať IDE (integrated development environment). Ak sa ale chcete
+sa nazývať IDE (integrated development environment). Ak sa chcete
 pozrieť aj na niektoré z nich, môžete si vyskúšať napríklad jednu
 z nasledovných možností: Visual Studio Code, Netbeans, Eclipse, CLion
 (so študentskou licenciou zadarmo).
+
+Ak chcete bežať Linux na počítači s nainštalovaným Windows, môžete ho spúšťať vo virtuálnom počítači. Návod nájdete na [tejto stránke](/prog1/files/debian-vm.sk.html).
 
 
 ## Práca s počítačmi na fakulte

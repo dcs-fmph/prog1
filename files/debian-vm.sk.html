@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debian VM</title>
+
+<style>
+  /***** tokens — APPROXIMATION of the VirtualBox.org look (not their exact brand values) *****/
+  /* VirtualBox-ish blue primary + dark slate headings + light-grey page with white cards. */
+  :root {
+    --border:#dfe3e8; --accent:#1e73c4; --accent-weak:#e9f1fb;
+    --slate:#16294a; --cmt:#6a7683;
+    --page:#f4f6f9; --card:#ffffff;
+    --shadow:0 1px 3px rgba(16,42,74,.08), 0 1px 2px rgba(16,42,74,.05);
+  }
+
+  /***** base *****/
+  * { box-sizing: border-box; }
+  body {
+    color:#1f2a37; background-color:var(--page);
+    margin:0; padding:0; overflow:hidden; height:100vh;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:1rem; text-align:left; line-height:1.55;
+  }
+  p { margin:.5rem 0; }
+  h1 { font-size:1.7rem; line-height:1.3; color:var(--slate); padding:48px 0 0 10px; margin:0; }
+  h2 { font-size:1.4rem; line-height:1.4; color:var(--slate); padding:24px 0 0 0; margin:0; }
+  h3 { font-size:1.15rem; line-height:1.3; color:var(--slate); margin:1rem 0 .3rem; }
+  a          { text-decoration:none; color:var(--accent); }
+  a:hover    { text-decoration:underline; }
+  a:visited  { color:#3a5f8a; }
+  h1 .langswitch { font-size:.8em; font-weight:normal; white-space:nowrap; }
+  h1 .langswitch a { color:var(--accent); }
+
+  /***** layout (master / wrapper / aside / main) *****/
+  div.master  { display:flex; flex-direction:row; justify-content:center; width:100%; height:100%; }
+  div.wrapper { display:flex; height:100%; width:100%; }
+  div.wrapper > #dummy_gap1 { flex:1 0 0px; }
+  div.wrapper > aside       { flex:0 0 23em; padding:0 10px; overflow-y:auto; }
+  div.wrapper > #dummy_gap2 { flex:0.125 0 40px; }
+  div.wrapper > main        { flex:1 1 auto; overflow-y:auto; scrollbar-gutter:stable; padding:0 10px 5em 10px; }
+  div.wrapper > main > .scrolling_main { display:flex; flex-direction:row; justify-content:flex-start; }
+  div.wrapper > main > .scrolling_main > .scrolling_main_body { max-width:54em; width:100%; }
+
+  /***** sidebar — TOC as a white nav card *****/
+  aside .subtitle { padding:0 0 0 10px; color:var(--cmt); font-variant-caps:small-caps; }
+  nav.toc {
+    margin-top:1.4em; background:var(--card);
+    border:1px solid var(--border); border-top:3px solid var(--accent);
+    border-radius:10px; box-shadow:var(--shadow); padding:.8rem 1rem;
+  }
+  nav.toc .toc-label { display:block; font-variant-caps:small-caps; color:var(--cmt); font-size:1.05em; margin-bottom:.2em; }
+  nav.toc ol { margin:0 0 0 1em; padding-left:1.2em; }
+  nav.toc li { margin:.15em 0; }
+  .vm-info { margin-top:1rem; padding:0 4px; font-size:.9rem; line-height:1.5; color:#3a4653; }
+  .vm-info p { margin:.45rem 0; }
+
+  /***** code + terminal output *****/
+  code, .out {
+    font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  }
+  code { background:#eef2f7; border-radius:4px; padding:.06em .35em; font-size:.92em; color:var(--slate); }
+  pre {
+    background:#f1f4f8; border:1px solid var(--border); border-radius:8px;
+    padding:12px 14px; overflow-x:auto; margin:.6rem 0; text-align:left; color:#24313f;
+  }
+  pre code { background:none; padding:0; color:inherit; }
+  pre.term { background:#0f1b2d; color:#e6edf5; border-color:#0f1b2d; }
+  .cmt { color:var(--cmt); }
+  .note {
+    border-left:4px solid var(--accent); background:var(--accent-weak); color:#33414f;
+    padding:.6rem .9rem; border-radius:0 8px 8px 0; margin:.7rem 0;
+  }
+  .footer { color:var(--cmt); font-size:.9rem; }
+  hr { border:none; border-top:1px solid var(--border); margin:1.8rem 0; }
+
+  /***** section headings — blue rounded pill number *****/
+  .section-h { scroll-margin-top:70px; }
+  /* plain inline number in the heading colour — no circle/pill */
+  .section-h .num {
+    display:inline; background:none; color:inherit; font-size:inherit;
+    font-weight:bold; padding:0; border-radius:0;
+    vertical-align:baseline; margin-right:.35em;
+  }
+
+  /***** content boxes — white cards with soft shadow *****/
+  .box {
+    border:1px solid var(--border); border-top:3px solid var(--accent);
+    border-radius:10px; background:var(--card); box-shadow:var(--shadow);
+    padding:8px 18px 16px; margin-top:.8rem;
+  }
+  .box ol { margin:.4rem 0; padding-left:1.4em; }
+  .box li { margin:.3em 0; }
+
+  /***** collapsible "Check it" *****/
+  details.check { border:1px solid var(--border); border-radius:8px; background:#f7f9fc; margin:.7rem 0 0; }
+  details.check > summary {
+    cursor:pointer; padding:.45rem .7rem; font-variant-caps:small-caps; font-weight:bold;
+    color:var(--accent); list-style:none;
+  }
+  details.check > summary::-webkit-details-marker { display:none; }
+  details.check > summary::before { content:"\25B8"; margin-right:.5em; }
+  details.check[open] > summary::before { content:"\25BE"; }
+  details.check[open] > summary { border-bottom:1px solid var(--border); }
+  details.check .check-body { padding:.3rem .8rem .6rem; }
+  details.check .check-body ul { margin:.3rem 0; padding-left:1.4em; text-align:left; }
+  details.check .check-body li { margin:.2em 0; }
+
+  /***** responsive *****/
+  @media (max-width:900px) {
+    body { overflow:auto; height:auto; }
+    div.master, div.wrapper { height:auto; }
+    div.wrapper { flex-direction:column; }
+    div.wrapper > main { overflow-y:visible; }
+    div.wrapper > aside { flex-basis:auto; }
+    div.wrapper > #dummy_gap1, div.wrapper > #dummy_gap2 { display:none; }
+  }
+  @media (max-width:768px) {
+    nav.toc ol { padding-left:14px; }
+  }
+</style>
+</head>
+
+<body>
+<div class="master">
+<div class="wrapper">
+  <div id="dummy_gap1"></div>
+
+  <aside>
+    <h1>Debian VM <span class="langswitch"><a href="./debian-vm.sk.html"><strong>[SK]</strong></a> <a href="./debian-vm.en.html">[EN]</a></span></h1>
+    <div class="subtitle">Len pre Windows</div>
+    <nav class="toc">
+      <span class="toc-label">Obsah</span>
+      <ol start="0">
+        <li><a href="#install">Inštalácia VirtualBoxu</a></li>
+        <li><a href="#import">Import VM</a></li>
+        <li><a href="#run">Spustenie</a></li>
+      </ol>
+    </nav>
+    <div class="vm-info">
+      <p>Predpripravená virtuálka s operačným systémom Debianom&nbsp;13 (KDE&nbsp;Plasma) (<code>debian.ova</code>) s už pripravenými nástrojmi na vývoj C/C++: <code>gcc</code>, <code>clang</code>, <code>gdb</code> a <code>valgrind</code>.</p>
+    </div>
+  </aside>
+
+  <div id="dummy_gap2"></div>
+
+  <main>
+  <div class="scrolling_main">
+  <div class="scrolling_main_body">
+
+    <!-- ===== 0. INSTALL VIRTUALBOX ===== -->
+    <h2 class="section-h" id="install"><span class="num">0</span>Inštalácia VirtualBoxu</h2>
+    <div class="box">
+      <ol>
+        <li>Prejdite na <a href="https://www.virtualbox.org" rel="noopener">virtualbox.org</a> &rarr; <strong>Downloads</strong> &rarr; <strong>Windows hosts</strong> a stiahnite inštalátor.</li>
+        <li>Spustite stiahnutý <code>VirtualBox-*-Win.exe</code>. V sprievodcovi klikajte <strong>Next</strong>, ponechajte predvolené nastavenia, potom <strong>Install</strong> a <strong>Finish</strong>.</li>
+      </ol>
+      <details class="check">
+        <summary>Vysvetlenie pojmov</summary>
+        <div class="check-body">
+          <ul>
+            <li><strong>Host</strong>: operačný systém, na ktorom beží VirtualBox (váš Windows).</li>
+            <li><strong>Guest</strong>: operačný systém, ktorý beží <strong>vnútri</strong> VirtualBoxu (VM s Debianom).</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 1. IMPORT THE VM ===== -->
+    <h2 class="section-h" id="import"><span class="num">1</span>Import Debian VM</h2>
+    <div class="box">
+      <ol>
+        <li>Stiahnite <a href="https://example.com/debian.ova" rel="noopener"><code>debian.ova</code></a> z example.com.</li>
+        <li>Vo VirtualBoxe: <strong>File &rarr; Import Appliance&hellip;</strong> (alebo stlačte <strong>Ctrl+I</strong>).</li>
+        <li>Kliknite na ikonu priečinka, vyberte stiahnutý <code>debian.ova</code>, potom <strong>Next</strong>.</li>
+        <li>Nastavenia ponechajte predvolené a kliknite <strong>Finish</strong>. Import trvá niekoľko minút.</li>
+      </ol>
+      <details class="check">
+        <summary>Riešenie problémov</summary>
+        <div class="check-body">
+          <ul>
+            <li><strong>Najčastejší problém</strong>: V nastaveniach BIOS/UEFI zapnite virtualizáciu procesora Intel <strong>VT-x</strong> alebo AMD <strong>AMD-V</strong> (<a href="https://support.microsoft.com/en-us/windows/experience/enable-virtualization-on-windows" rel="noopener">Návod of Microsoft-u</a>).</li>
+	    <li><strong>Iný častý problém</strong>: Vlastný hypervízor Hyper-V vo Windowse môže kolidovať s VirtualBoxom. Vypnite ho cez <strong>Zapnúť alebo vypnúť súčasti systému Windows</strong> / Turn Windows features on or off (Návod od Microsoftu: <a href="https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v" rel="noopener">Návod of Microsoftu</a>).</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 2. RUN IT ===== -->
+    <h2 class="section-h" id="run"><span class="num">2</span>Spustenie</h2>
+    <div class="box">
+      <ol>
+        <li>V zozname vyberte importovaný počítač.</li>
+        <li>Kliknite <strong>Start</strong> (zelená šípka), alebo naň dvakrát kliknite.</li>
+        <li>Otvorí sa okno VM a Debian&nbsp;13 (KDE) sa spustí na prihlasovaciu obrazovku.</li>
+      </ol>
+      <div class="note">Na prihlasovacej obrazovke ponechajte reláciu <strong>X11</strong> (Xorg), ktorá je predvolená. Vyhnete sa tak výkonnostným problémom, ktoré môže mať Wayland pri virtualizácii.</div>
+      <p>Účty vo formáte <code>používateľ:heslo</code>:</p>
+<pre><code>root:toor
+student:nbusr123</code></pre>
+    </div>
+
+  </div>
+  </div>
+  </main>
+</div>
+</div>
+</body>
+</html>
