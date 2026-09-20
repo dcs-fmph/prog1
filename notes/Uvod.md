@@ -30,7 +30,7 @@ alebo kto má práve čas.
   - Naučiť sa algoritmicky uvažovať, písať kratšie programy a hľadať v
     nich chyby, porozumieť existujúcemu kódu
   - Oboznámiť sa so základnými programovými a dátovými štruktúrami
-    jazyka C, nie je však nutne so všetkými črtami tohto
+    jazyka C, nie je však so všetkými črtami tohto
     jazyka
       - Cykly, podmienky, premenné a ich typy, funkcie a odovzdávanie
         parametrov, polia, smerníky, reťazce, súbory
@@ -40,13 +40,12 @@ alebo kto má práve čas.
         aritmetické výrazy, rad a zásobník, rekurzia, prehľadávanie,
         vyfarbovanie
   - V malej miere si ukážeme aj niektoré črty jazyka C++.
-  - Aj štruktúry, ktoré sú hotové v C++ a iných jazykoch, si budeme
+  - Aj štruktúry, ktoré sú hotové v C++, Pythone a iných jazykoch, si budeme
     programovať sami, aby sme videli, čo sa za nimi skrýva
 
 ## Priebeh semestra
 
-  - Na **prednáškach** budeme preberať obsah predmetu. Prednášky budú
-    2x2 vyučovacie hodiny do týždňa.
+  - Na **prednáškach** budeme preberať obsah predmetu (2x2 vyučovacie hodiny do týždňa).
   - **Cvičenia** budú 2x2 vyučovacie hodiny do týždňa v
     počítačovej učebni a ich cieľom je aktívne si precvičiť učivo.
     Hlavnou náplňou cvičenia je riešenie zadaných príkladov pri počítači alebo na papieri.
@@ -83,8 +82,8 @@ alebo kto má práve čas.
 
 ## Celkové odporúčania
 
-Prichádzajúci študenti v prvom ročníku majú veľmi rôznu úroveň znalosti
-programovania, v závislosti od toho, koľko sa mu venovali na strednej
+Prichádzajúci študenti v prvom ročníku majú rôznu úroveň znalosti
+programovania, podľa toho, koľko sa mu venovali na strednej
 škole. Preto pre niektorých môže byť tento predmet veľmi ľahký, pre
 iných veľmi ťažký. Môže sa to zdať nespravodlivé, ale pokročilí
 študenti už nad programovaním strávili dlhé hodiny a začiatočníci ich
@@ -99,7 +98,7 @@ základné algoritmy, ktoré sa budú počas semestra striedať.
 | **Programovať viem len málo alebo vôbec**                                                                                                                        | ťažké                                          | ťažké                                    | Dôležité je začať usilovne pracovať už od začiatku semestra. Odporúčame chodiť aj na doplnkové cvičenia, ďalšie príklady riešiť doma. Neváhajte sa nás spýtať, ak vám niečo nie je jasné.                                                                                                                                                                                                                                                                |
 | **Som skúsený programátor, ale neovládam C**                                                                                                             | ľahké                                          | ťažké                                    | Aj keď prvé prednášky sa vám môžu zdať ľahké, sledujte učebnú látku, aby sa nestalo, že ste sa niektorými dôležitými vecami ešte nestretli. Nezabudnite riešiť príklady z cvičení a domáce úlohy. Hlavne ale nezaspite na vavrínoch: už po pár týždňoch začneme preberať algoritmy a rekurziu, čo môžu byť pre vás ťažšie témy. Treba preto zamakať aj na tomto predmete a v prípade, že vám učivo robí problémy, neváhajte prísť na doplnkové cvičenia. |
 | **Som skúsený programátor a ovládam C**                                                                                                                | viem                                           | ťažké                                    | Podobne ako predchádzajúci riadok. Môžete si prípadne skúsiť napísať test pre pokročilých, môže sa vám podariť preskočiť zopár cvičení.                                                                                                                                                                                                                                                                                                                  |
-| **Som skúsený programátor a ovládam aj rekurziu a základné algoritmy** (napr. z programátorských súťaží alebo rozšírenej výučby programovania na strednej škole) | ľahké/viem                                     | ľahké/viem                               | Aby ste sa nenudili riešením ľahkých príkladov, odporúčame test pre pokročilých. Aj tak však treba odovzdať domáce úlohy a absolvovať skúšku, prípadne aj semestrálny test. Priebežne sledujte učivo a v prípade nejasností sa pýtajte.                                                                                                                                                                                                                  |
+| **Som skúsený programátor a ovládam aj rekurziu a základné algoritmy** (napr. z programátorských súťaží alebo rozšírenej výučby programovania na strednej škole) | ľahké/viem                                     | ľahké/viem                               | Aby ste sa nenudili riešením ľahkých príkladov, odporúčame test pre pokročilých, vďaka ktorému vám odpadnú niektoré povinnosti. Priebežne sledujte učivo a v prípade nejasností sa pýtajte.                                                                                                                                                                                                                  |
 
 
 ## Literatúra

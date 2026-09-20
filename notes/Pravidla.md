@@ -61,7 +61,7 @@ získateľných bodov v danej aktivite.
 
 ## Praktická skúška
 
-  - Na skúške budete riešiť 2 úlohy pri počítači v celkovom trvaní 2
+  - Na skúške budete riešiť 2 úlohy pri počítači v celkovom trvaní 2,5
     hodiny.
   - Na skúške nebude k dispozícii internet.
   - Na skúške budú úlohy automaticky testované. Aspoň jedna úloha musí
@@ -92,7 +92,7 @@ získateľných bodov v danej aktivite.
 ## Odpisovanie
 
   - Máte povolené sa so spolužiakmi a ďalšími osobami rozprávať o
-    zadaných príkladoch a o stratégiách na ich riešenie. Kód, ktorý
+    zadaných programítorských príkladoch a o stratégiách na ich riešenie. Kód, ktorý
     odovzdáte, musí však byť vaša samostatná práca. Je **zakázané
     ukazovať svoj kód spolužiakom resp. im ho diktovať**. Pri diskusii o
     úlohe nemajte otvorené vaše programy a ani si nerobte detailné
@@ -104,7 +104,7 @@ získateľných bodov v danej aktivite.
   - Pri riešení cvičných príkladov **nepoužívajte ani nástroje umelej
     inteligencie (AI)**. Ak sú takéto nástroje súčasťou vášho editora,
     vypnite ich pri práci na našich príkladoch.
-  - Počas testov a skúšok môžete používať iba povolené pomôcky a
+  - Počas papierových rzcvičiek, testov a skúšok môžete používať iba povolené pomôcky a
     nesmiete komunikovať so žiadnymi osobami okrem vyučujúcich.
   - **Po termíne odovzdania** príslušnej úlohy je povolené a môže byť 
     poučné porovnať váš program s programami, ktoré napísali spolužiaci
