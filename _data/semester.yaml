@@ -9,10 +9,10 @@ weeks:
     items:
       - {display: 1, type: notes, file: P1, name: 'Prednáška 1'}
       - {display: 0, type: notes, file: P2, name: 'Prednáška 2'}
-      - {display: 0, type: notes, file: C1, name: 'Cvičenia 1'}
-      - {display: 0, type: notes, file: Softver, name: 'Softvér'}
-      - {display: 0, type: notes, file: Testovac, name: 'Testovač návod'}
-      - {display: 0, type: url, file: 'https://prog.dcs.fmph.uniba.sk/', name: 'Testovač'}
+      - {display: 1, type: notes, file: C1, name: 'Cvičenia 1'}
+      - {display: 1, type: notes, file: Softver, name: 'Softvér'}
+      - {display: 1, type: notes, file: Testovac, name: 'Testovač návod'}
+      - {display: 1, type: url, file: 'https://prog.dcs.fmph.uniba.sk/', name: 'Testovač'}
 
   - date: '28.9-4.10.'
     content: 'Ďalšie príklady na cykly, Euklidov algoritmus, cyklus while, funkcie'
