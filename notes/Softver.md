@@ -130,13 +130,7 @@ praktické.
 
 ### Ako nainštalovať potrebné nástroje
 
-Na [tejto stránke](/prog1/files/first-c-program.sk.html) nájdete návod na:
-
-  - inštaláciu potrebného softvéru na váš počítač (textové editory, kompilátor, ...)
-      - Na počítačoch na fakulte je samozrejme už všetko potrebné nainštalované.
-  - napísanie prvého programu
-  - jeho kompiláciu a spustenie
-
+Návod na [zvláštnej stránke](/prog1/files/first-c-program.sk.html)
 
 ### Použitie iných nástrojov
 
