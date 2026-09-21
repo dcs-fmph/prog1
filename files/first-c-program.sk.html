@@ -263,10 +263,10 @@
     <!-- ===== TUTORIAL: radios + chooser + panels are siblings ===== -->
     <div class="tutorial">
 
-      <input class="state" type="radio" name="os"   id="os-linux"  checked>
-      <input class="state" type="radio" name="os"   id="os-win">
-      <input class="state" type="radio" name="type" id="type-kate">
-      <input class="state" type="radio" name="type" id="type-manual" checked>
+      <input class="state" type="radio" name="os"   id="os-win" checked>
+      <input class="state" type="radio" name="os"   id="os-linux" >
+      <input class="state" type="radio" name="type" id="type-kate" checked>
+      <input class="state" type="radio" name="type" id="type-manual">
 
       <div class="controls">
         <div class="group">
@@ -279,8 +279,8 @@
         <div class="group">
           <span class="group-label">Spôsob</span>
           <div class="pills">
-            <label for="type-manual">Manuálne (terminál)</label>
             <label for="type-kate">V editore Kate</label>
+            <label for="type-manual">Manuálne (terminál)</label>
           </div>
         </div>
       </div>
@@ -328,7 +328,7 @@ Copyright (C) 2023 Free Software Foundation, Inc.</code></pre>
         <ol>
           <li><a href="https://winlibs.com" rel="noopener">winlibs.com</a> &rarr; <strong>Release versions</strong> &rarr; najnovšia <strong>UCRT</strong>, <strong>Win64</strong> &rarr; stiahnite <strong>Zip</strong>.</li>
           <li>Rozbaľte; vnútorný priečinok <code>mingw64</code> presuňte do <code>C:\mingw64</code> (cesta bez medzier).</li>
-          <li>Otvorte štartmenu, a píšte <em>Upraviť systémové premenné prostredia</em> &rarr; <strong>Premenné prostredia&hellip;</strong> &rarr; <strong>Používateľské premenné</strong> &rarr; <strong>PATH</strong> &rarr; <strong>Upraviť</strong> &rarr; <strong>Nový</strong> &rarr; <code>C:\mingw64\bin</code>.</li>
+          <li>V štartmenu píšte <em>Upraviť premenné prostredia pre váš účet</em> (<em>Edit environment variables for your account</em>) &rarr; <strong>Premenné užívateľa</strong> (vrchná sekcia) &rarr; Premenná <strong>Path</strong> &rarr; <strong>Upraviť</strong> &rarr; <strong>Nový</strong> &rarr; <code>C:\mingw64\bin</code>.</li>
         </ol>
         <p>Nainštalujte editor Kate (<a href="https://apps.microsoft.com/detail/9NWMW7BB59HW?hl=en-us&gl=SK&ocid=pdpshare" rel="noopener">cez MS Store</a>, alebo cez príkaz v Powershell) alebo Notepad++ (<a href="https://notepad-plus-plus.org" rel="noopener">web</a>), PSPad (<a href="https://www.pspad.com" rel="noopener">web</a>).</p>
 <pre><code>winget install KDE.Kate            <span class="cmt"># Powershell</span></code></pre>
