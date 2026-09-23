@@ -8,7 +8,7 @@ weeks:
     content: 'Úvod, premenné, podmienky, výrazy, cyklus for'
     items:
       - {display: 1, type: notes, file: P1, name: 'Prednáška 1'}
-      - {display: 0, type: notes, file: P2, name: 'Prednáška 2'}
+      - {display: 1, type: notes, file: P2, name: 'Prednáška 2'}
       - {display: 1, type: notes, file: C1, name: 'Cvičenia 1'}
       - {display: 1, type: notes, file: Softver, name: 'Softvér'}
       - {display: 1, type: notes, file: Testovac, name: 'Testovač návod'}
@@ -19,7 +19,7 @@ weeks:
     items:
       - {display: 0, type: notes, file: P3, name: 'Prednáška 3'}
       - {display: 0, type: notes, file: P4, name: 'Prednáška 4'}
-      - {display: 0, type: text, name: 'Cvičenia 2'}
+      - {display: 0, type: text, name: 'Cvičenia 2 (na testovači)'}
      
   - date: '5.-11.10.'
     content: 'Struct, polia'
