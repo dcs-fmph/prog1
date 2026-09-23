@@ -24,6 +24,7 @@ weeks:
   - date: '5.-11.10.'
     content: 'Struct, polia'
     items:
+      - {display: 0, type: notes, file: P4b, name: 'Prednáška 4b'}
       - {display: 0, type: notes, file: P5, name: 'Prednáška 5'}
       - {display: 0, type: url, file: 'https://youtu.be/Uml5x1K8CJU', name: 'video s koncom prednášky'}
       - {display: 0, type: notes, file: SVGdraw, name: 'Grafická knižnica SVGdraw'}
