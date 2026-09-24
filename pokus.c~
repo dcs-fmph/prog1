@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <math.h>
+
+struct bod {
+    double x, y;  // suradnice bodu v rovine
+};
+
+double dlzka(struct bod bod1, struct bod bod2) {
+    // funkcia vrati dlzku usecky z bodu 1 do bodu 2
+    double dx = bod1.x - bod2.x;
+    double dy = bod1.y - bod2.y;
+    return sqrt(dx * dx + dy * dy);
+}
+
+struct bod stred(struct bod bod1, struct bod bod2) {
+    struct bod stred;
+    // funkcia vrati bod, ktory je stredom usecky z bodu 1 do bodu 2
+    stred.x = (bod1.x + bod2.x) / 2;
+    stred.y = (bod1.y + bod2.y) / 2;
+    return stred;
+}
+
+void vypisBod(struct bod b) {
+    // funkcia vypise suradnice bodu v zatvorke a koniec riadku
+    printf("(%lf,%lf)\n", b.x, b.y);
+}
+
+int main() {
+    // nacitame suradnice vrcholov trojuholnika
+    struct bod A, B, C;
+    printf("Zadaj suradnice vrcholu A oddelene medzerou: ");
+    scanf("%lf %lf", &A.x, &A.y);
+    printf("Zadaj suradnice vrcholu B oddelene medzerou: ");
+    scanf("%lf %lf", &B.x, &B.y);
+    printf("Zadaj suradnice vrcholu C oddelene medzerou: ");
+    scanf("%lf %lf", &C.x, &C.y);
+    // spocitame dlzky stran
+    double da = dlzka(B, C);
+    double db = dlzka(A, C);
+    double dc = dlzka(A, B);
+    // vypiseme obvod
+    printf("Obvod trojuholnika ABC: %lf\n", da + db + dc);
+
+    // spocitame stredy stran
+    struct bod stredAB = stred(A, B);
+    struct bod stredAC = stred(A, C);
+    struct bod stredBC = stred(B, C);
+
+    // vypiseme stredy stran
+    printf("Stred strany AB: ");
+    vypisBod(stredAB);
+    printf("Stred strany AC: ");
+    vypisBod(stredAC);
+    printf("Stred strany BC: ");
+    vypisBod(stredBC);
+}
