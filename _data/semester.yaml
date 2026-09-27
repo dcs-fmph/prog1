@@ -17,9 +17,9 @@ weeks:
   - date: '28.9-4.10.'
     content: 'Ďalšie príklady na cykly, Euklidov algoritmus, cyklus while, funkcie'
     items:
-      - {display: 0, type: notes, file: P3, name: 'Prednáška 3'}
+      - {display: 1, type: notes, file: P3, name: 'Prednáška 3'}
       - {display: 0, type: notes, file: P4, name: 'Prednáška 4'}
-      - {display: 0, type: text, name: 'Cvičenia 2 (na testovači)'}
+      - {display: 1, type: text, name: 'Cvičenia 2 (na testovači)'}
      
   - date: '5.-11.10.'
     content: 'Struct, polia'
