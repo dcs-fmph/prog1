@@ -48,7 +48,7 @@ Zobrazovanie terminálu
 - Príkaz `ls` vypíše zoznam súborov v aktuálnom priečinku, mali by ste vidieť okrem iného `program.c`
 - Spustite kompilátor
   `gcc -Wall program.c -o program`
-- Ak kompilátor vypísal chybu alebo varovanie, pokúste sa ju pochopiť a opraviť, potom spustie kompilátor znovu
+- Ak kompilátor vypísal chybu alebo varovanie, pokúste sa ju pochopiť a opraviť, potom spustite kompilátor znovu
 - Ak kompilátor nevypísal nič, zrejme úspešne vytvoril spustiteľný súbor `program`
 - Svoj program môžete spustiť takto:
   `./program`
