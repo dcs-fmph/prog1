@@ -219,6 +219,8 @@ Stred strany AC: (2.00,0.00)
 Stred strany BC: (2.00,1.50)
 ```
 
+Cvičenie: Napíšte verziu funkcie na súčet deliteľov, ktorá vráti záznam typu `struct`, ktorý bude obsahovať samotný súčet deliteľov a logickú hodnotu vyjadrujúcu, či je súčet deliteľov platný, t.j. či bolo vstupné číslo kladné. Používa sa takáto funkcia pohodlne v hlavnom programe?
+
 ## Spracovanie väčšieho množstva dát
 
 Naše programy doteraz spracovávali len malý počet vstupných dát
