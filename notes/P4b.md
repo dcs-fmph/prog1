@@ -64,12 +64,12 @@ Ako by sme mohli funkciu zlepšiť?
 - Vrátiť samotný výsledok ale aj logickú hodnotu, či bol vstup správny, t.j. výsledok je zmyspluplný.
   - Momentálne však ešte nevieme z funkcie vrátiť viac ako jednu hodnotu.
 - V prípade nesprávneho vstupu do funkcie ukončiť beh programu s nejakou správou o chybe
-  - Uvidíme nižšie
+  - Uvidíme nižšie.
 - Mnohé jazyky na ošetrovanie podobných chýb používajú mechanizmus výnimiek, uvidíte v letnom semestri.
 
 ### Použitie funkcie `assert`
 
-- Na ukončenie celého programu v prípade zlého vstupu, môžeme použiť
+- Na ukončenie celého programu V prípade chyby môžeme použiť
 funkciu `assert` (treba ` #include  `<assert.h>).
 - Táto funkcia kontroluje platnosť nejakej podmienky, jej vstupom je teda logická hodnota.
 - Ak je podmienka splnená, program normálne pokračuje.
@@ -125,23 +125,23 @@ double dlzka(double x1, double y1,
 Program bude krajší, ak si údaje o jednom bode spojíme do jedného záznamu
 
 ```c
-struct bod {
+typedef struct {
     double x, y;
-};
+} bod;
 ```
 
-- Pomocou `struct` vytvoríme nový dátový typ `struct bod`, ktorý má zložky `x` a `y`
+- Pomocou `typedef struct` vytvoríme nový dátový typ `bod`, ktorý má zložky `x` a `y`
 - V jednom `struct`-e môžu byť aj položky rôznych typov, napr.
 
 ```c
-struct rozsireny_bod { 
+typedef struct {
    double x,y; 
    int id; 
    bool visible; 
-};
+} rozsireny_bod;
 ```
 
-- Môžeme vytvárať premenné typu `struct bod`, napr. `struct bod a, b;`
+- Môžeme vytvárať premenné typu `bod`, napr. `bod a, b;`
 - K položkám bodu pristupujeme pomocou bodky, napr. `a.x = 4.0;`
 - Súradnice bodov môžeme posielať do funkcií ako jeden parameter a tiež môžeme funkcie vracať záznamy typu `struct`, ako vidíme v nasledujúcom príklade.
 
@@ -152,33 +152,33 @@ trojuholníka a stredy všetkých troch strán.
 #include <stdio.h>
 #include <math.h>
 
-struct bod {
+typedef struct {
     double x, y;  // suradnice bodu v rovine
-};
+} bod;
 
-double dlzka(struct bod bod1, struct bod bod2) {
+double dlzka(bod bod1, bod bod2) {
     // funkcia vrati dlzku usecky z bodu 1 do bodu 2
     double dx = bod1.x - bod2.x;
     double dy = bod1.y - bod2.y;
     return sqrt(dx * dx + dy * dy);
 }
 
-struct bod stred(struct bod bod1, struct bod bod2) {
-    struct bod stred;
+bod stred(bod bod1, bod bod2) {
+    bod stred;
     // funkcia vrati bod, ktory je stredom usecky z bodu 1 do bodu 2
     stred.x = (bod1.x + bod2.x) / 2;
     stred.y = (bod1.y + bod2.y) / 2;
     return stred;
 }
 
-void vypisBod(struct bod b) {
+void vypisBod(bod b) {
     // funkcia vypise suradnice bodu v zatvorke a koniec riadku
-    printf("(%lf,%lf)\n", b.x, b.y);
+    printf("(%.2lf,%.2lf)\n", b.x, b.y);
 }
 
 int main() {
     // nacitame suradnice vrcholov trojuholnika
-    struct bod A, B, C;
+    bod A, B, C;
     printf("Zadaj suradnice vrcholu A oddelene medzerou: ");
     scanf("%lf %lf", &A.x, &A.y);
     printf("Zadaj suradnice vrcholu B oddelene medzerou: ");
@@ -190,12 +190,12 @@ int main() {
     double db = dlzka(A, C);
     double dc = dlzka(A, B);
     // vypiseme obvod
-    printf("Obvod trojuholnika ABC: %lf\n", da + db + dc);
+    printf("Obvod trojuholnika ABC: %.2lf\n", da + db + dc);
 
     // spocitame stredy stran
-    struct bod stredAB = stred(A, B);
-    struct bod stredAC = stred(A, C);
-    struct bod stredBC = stred(B, C);
+    bod stredAB = stred(A, B);
+    bod stredAC = stred(A, C);
+    bod stredBC = stred(B, C);
 
     // vypiseme stredy stran
     printf("Stred strany AB: ");
@@ -213,10 +213,10 @@ Príklad behu programu:
 Zadaj suradnice vrcholu A oddelene medzerou: 0 0
 Zadaj suradnice vrcholu B oddelene medzerou: 0 3
 Zadaj suradnice vrcholu C oddelene medzerou: 4 0
-Obvod trojuholnika ABC: 12
-Stred strany AB: (0,1.5)
-Stred strany AC: (2,0)
-Stred strany BC: (2,1.5)
+Obvod trojuholnika ABC: 12.00
+Stred strany AB: (0.00,1.50)
+Stred strany AC: (2.00,0.00)
+Stred strany BC: (2.00,1.50)
 ```
 
 ## Spracovanie väčšieho množstva dát
