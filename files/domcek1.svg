@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="200px" height="300px">
+<rect x="0" y="0" width="200" height="300" style="fill:white;stroke:lightgray;stroke-width:1;" />
+
+<rect id="item0" x="50" y="150" width="100" height="100" style="stroke:black;stroke-width:1;fill:none" />
+<line id="item1" x1="50" y1="250" x2="150" y2="150" style="stroke:black;stroke-width:1;fill:none" />
+<line id="item2" x1="50" y1="150" x2="150" y2="250" style="stroke:black;stroke-width:1;fill:none" />
+<line id="item3" x1="50" y1="150" x2="100" y2="50" style="stroke:black;stroke-width:1;fill:none" />
+<line id="item4" x1="150" y1="150" x2="100" y2="50" style="stroke:black;stroke-width:1;fill:none" />
+</svg>

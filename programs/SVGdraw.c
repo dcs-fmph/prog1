@@ -95,7 +95,7 @@ static int addItem(struct SVGdraw_impl *d);
 static int nextItemId(struct SVGdraw_impl *d);
 static void printStyle(struct SVGdraw_impl *d);
 
-void SVGdraw_init(SVGdraw *self, int width, int height, const char* filename) {
+Drawing drawingInit(int width, int height, const char* filename) {
     struct SVGdraw_impl *d = malloc(sizeof(struct SVGdraw_impl));
     checkArg(d != NULL, "Nedostatok pamate");
     d->itemTimes = NULL;
@@ -110,20 +110,22 @@ void SVGdraw_init(SVGdraw *self, int width, int height, const char* filename) {
     strcpy(d->fillColor, "none");
     d->fontSize = 12;
     d->lineWidth = 1;
-    self->impl = d;
-
+    
     d->svg = fopen(filename, "w");
     checkArg(d->svg != NULL, "Nepodarilo sa otvorit subor na zapis");
     initSVG(d->svg, width, height);
+    Drawing self;
+    self.impl = d;
+    return self;
 }
 
-void SVGdraw_wait(SVGdraw *self, double time) {
+void drawingWait(Drawing drawing, double time) {
     checkArg(time > 0, "Cas cakania musi byt kladne cislo");
-    self->impl->time += time;
+    drawing.impl->time += time;
 }
 
-void SVGdraw_clear(SVGdraw *self) {
-    struct SVGdraw_impl *d = self->impl;
+void drawingClear(Drawing drawing) {
+    struct SVGdraw_impl *d = drawing.impl;
     for (int i = 0; i < d->itemTimesCount; i++) {
         if (d->itemTimes[i].second < 0) {
             d->itemTimes[i].second = d->time;
@@ -131,15 +133,15 @@ void SVGdraw_clear(SVGdraw *self) {
     }
 }
 
-void SVGdraw_hideItem(SVGdraw *self, int id) {
-    struct SVGdraw_impl *d = self->impl;
+void drawingHideItem(Drawing drawing, int id) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(id >= 0 && id < d->itemTimesCount, "Zadane id pre hideItem neexistuje");
     checkArg(d->itemTimes[id].second < 0, "Objekt s danym id vo funkcii hideItem bol uz predtym skryty.");
     d->itemTimes[id].second = d->time;
 }
 
-void SVGdraw_finish_without_destroy(SVGdraw *self) {
-    struct SVGdraw_impl *d = self->impl;
+void drawingFinishWithoutDestroy(Drawing drawing) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Funkciu finish je mozne volat iba raz");
 
     for (int i = 0; i < d->itemTimesCount; i++) {
@@ -163,30 +165,27 @@ void SVGdraw_finish_without_destroy(SVGdraw *self) {
     d->isActive = 0;
 }
 
-void SVGdraw_destroy(SVGdraw *self) {
-    if (self == NULL) {
-        return;
-    }
-    struct SVGdraw_impl *d = self->impl;
+void drawingDestroy(Drawing drawing) {
+    struct SVGdraw_impl *d = drawing.impl;
     if (d == NULL) {
         return;
     }
     if (d->isActive) {
-        SVGdraw_finish_without_destroy(self);
+        drawingFinishWithoutDestroy(drawing);
     }
     free(d->itemTimes);
     free(d->polygon);
     free(d);
-    self->impl = NULL;
+    drawing.impl = NULL;
 }
 
-void SVGdraw_finish(SVGdraw *self) {
-    SVGdraw_finish_without_destroy(self);
-    SVGdraw_destroy(self);
+void drawingFinish(Drawing drawing) {
+    drawingFinishWithoutDestroy(drawing);
+    drawingDestroy(drawing);
 }
 
-int SVGdraw_drawRectangle(SVGdraw *self, double x, double y, double width, double height) {
-    struct SVGdraw_impl *d = self->impl;
+int drawRectangle(Drawing drawing, double x, double y, double width, double height) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<rect id=\"item%d\" x=\"%g\" y=\"%g\" width=\"%g\" height=\"%g\" ",
             nextItemId(d), x, y, width, height);
@@ -195,8 +194,8 @@ int SVGdraw_drawRectangle(SVGdraw *self, double x, double y, double width, doubl
     return addItem(d);
 }
 
-int SVGdraw_drawEllipse(SVGdraw *self, double x, double y, double rx, double ry) {
-    struct SVGdraw_impl *d = self->impl;
+int drawEllipse(Drawing drawing, double x, double y, double rx, double ry) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<ellipse id=\"item%d\" cx=\"%g\" cy=\"%g\" rx=\"%g\" ry=\"%g\" ",
             nextItemId(d), x, y, rx, ry);
@@ -205,8 +204,8 @@ int SVGdraw_drawEllipse(SVGdraw *self, double x, double y, double rx, double ry)
     return addItem(d);
 }
 
-int SVGdraw_drawLine(SVGdraw *self, double x1, double y1, double x2, double y2) {
-    struct SVGdraw_impl *d = self->impl;
+int drawLine(Drawing drawing, double x1, double y1, double x2, double y2) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<line id=\"item%d\" x1=\"%g\" y1=\"%g\" x2=\"%g\" y2=\"%g\" ",
             nextItemId(d), x1, y1, x2, y2);
@@ -215,9 +214,9 @@ int SVGdraw_drawLine(SVGdraw *self, double x1, double y1, double x2, double y2) 
     return addItem(d);
 }
 
-int SVGdraw_drawText(SVGdraw *self, double x, double y, const char* text,
+int drawText(Drawing drawing, double x, double y, const char* text,
                      const char* justification) {
-    struct SVGdraw_impl *d = self->impl;
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<text id=\"item%d\" x=\"%g\" y=\"%g\" "
                     "style=\"fill:%s;stroke-width:0pt;stroke:none;font-size:%gpt;",
@@ -241,18 +240,18 @@ int SVGdraw_drawText(SVGdraw *self, double x, double y, const char* text,
     return addItem(d);
 }
 
-void SVGdraw_startPolygon(SVGdraw *self, double x, double y) {
-    self->impl->polygonCount = 0;
-    SVGdraw_addPolygonPoint(self, x, y);
+void startPolygon(Drawing drawing, double x, double y) {
+    drawing.impl->polygonCount = 0;
+    drawPolygonAddPoint(drawing, x, y);
 }
 
-void SVGdraw_addPolygonPoint(SVGdraw *self, double x, double y) {
-    struct SVGdraw_impl *d = self->impl;
+void drawPolygonAddPoint(Drawing drawing, double x, double y) {
+    struct SVGdraw_impl *d = drawing.impl;
     pushPair(&d->polygon, &d->polygonCount, &d->polygonCap, x, y);
 }
 
-int SVGdraw_drawPolygon(SVGdraw *self) {
-    struct SVGdraw_impl *d = self->impl;
+int drawPolygonFinish(Drawing drawing) {
+    struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     checkArg(d->polygonCount > 2, "Polygon musi mat aspon 3 vrcholy");
     fprintf(d->svg, "<polygon id=\"item%d\" points=\"", nextItemId(d));
@@ -266,39 +265,39 @@ int SVGdraw_drawPolygon(SVGdraw *self) {
     return addItem(d);
 }
 
-void SVGdraw_setLineColorRGB(SVGdraw *self, int r, int g, int b) {
-    formatRGBColor(self->impl->lineColor, SVGDRAW_COLOR_MAX, r, g, b);
+void setLineColorRGB(Drawing drawing, int r, int g, int b) {
+    formatRGBColor(drawing.impl->lineColor, SVGDRAW_COLOR_MAX, r, g, b);
 }
 
-void SVGdraw_setLineColor(SVGdraw *self, const char* color) {
-    setColorString(self->impl->lineColor, color);
+void setLineColor(Drawing drawing, const char* color) {
+    setColorString(drawing.impl->lineColor, color);
 }
 
-void SVGdraw_setFillColorRGB(SVGdraw *self, int r, int g, int b) {
-    formatRGBColor(self->impl->fillColor, SVGDRAW_COLOR_MAX, r, g, b);
+void setFillColorRGB(Drawing drawing, int r, int g, int b) {
+    formatRGBColor(drawing.impl->fillColor, SVGDRAW_COLOR_MAX, r, g, b);
 }
 
-void SVGdraw_setFillColor(SVGdraw *self, const char* color) {
+void setFillColor(Drawing drawing, const char* color) {
     const char *c = color;
     while ((*c) != 0) {
         checkArg(islower((unsigned char) *c), "Meno farby musi pozostavat iba z malych pismen");
         c++;
     }
-    setColorString(self->impl->fillColor, color);
+    setColorString(drawing.impl->fillColor, color);
 }
 
-void SVGdraw_setNoFill(SVGdraw *self) {
-    strcpy(self->impl->fillColor, "none");
+void setNoFill(Drawing drawing) {
+    strcpy(drawing.impl->fillColor, "none");
 }
 
-void SVGdraw_setFontSize(SVGdraw *self, double size) {
+void setFontSize(Drawing drawing, double size) {
     checkArg(size > 0, "Velkost fontu musi byt kladna");
-    self->impl->fontSize = size;
+    drawing.impl->fontSize = size;
 }
 
-void SVGdraw_setLineWidth(SVGdraw *self, double width) {
+void setLineWidth(Drawing drawing, double width) {
     checkArg(width > 0, "Sirka ciary musi byt kladna");
-    self->impl->lineWidth = width;
+    drawing.impl->lineWidth = width;
 }
 
 static int addItem(struct SVGdraw_impl *d) {
@@ -316,7 +315,7 @@ static void printStyle(struct SVGdraw_impl *d) {
             d->lineColor, d->lineWidth, d->fillColor);
 }
 
-void Turtle_init(Turtle *self, int width, int height, const char* filename,
+Turtle turtleInit(int width, int height, const char* filename,
                  int x, int y, double angle) {
     struct Turtle_impl *d = malloc(sizeof(struct Turtle_impl));
     checkArg(d != NULL, "Nedostatok pamate");
@@ -326,17 +325,20 @@ void Turtle_init(Turtle *self, int width, int height, const char* filename,
     d->pathLength = 0;
     d->speed = 100;
     d->isActive = 1;
-    self->impl = d;
-
+    
     d->svg = fopen(filename, "w");
     checkArg(d->svg != NULL, "Nepodarilo sa otvorit subor na zapis");
     initSVG(d->svg, width, height);
     fprintf(d->svg, "<path fill=\"none\" stroke=\"black\" id=\"turtlepath\"  d=\"");
     fprintf(d->svg, "M %g %g", d->x, d->y);
+    
+    Turtle self;
+    self.impl = d;
+    return self;
 }
 
-void Turtle_finish_without_destroy(Turtle *self) {
-    struct Turtle_impl *d = self->impl;
+void turtleFinishWithoutDestroy(Turtle turtle) {
+    struct Turtle_impl *d = turtle.impl;
     checkArg(d != NULL && d->isActive, "Funkciu finish je mozne volat iba raz");
     double time = d->pathLength / d->speed;
     fprintf(d->svg, "\"/>\n\n");
@@ -355,49 +357,46 @@ void Turtle_finish_without_destroy(Turtle *self) {
     d->isActive = 0;
 }
 
-void Turtle_destroy(Turtle *self) {
-    if (self == NULL) {
-        return;
-    }
-    struct Turtle_impl *d = self->impl;
+void turtleDestroy(Turtle turtle) {
+    struct Turtle_impl *d = turtle.impl;
     if (d == NULL) {
         return;
     }
     if (d->isActive) {
-        Turtle_finish_without_destroy(self);
+        turtleFinishWithoutDestroy(turtle);
     }
     free(d);
-    self->impl = NULL;
+    turtle.impl = NULL;
 }
 
-void Turtle_finish(Turtle *self) {
-    Turtle_finish_without_destroy(self);
-    Turtle_destroy(self);
+void turtleFinish(Turtle turtle) {
+    turtleFinishWithoutDestroy(turtle);
+    turtleDestroy(turtle);
 }
 
-void Turtle_setSpeed(Turtle *self, double speed) {
+void turtleSetSpeed(Turtle turtle, double speed) {
     checkArg(speed > 0, "Rychlost korytnacky musi byt kladna");
-    self->impl->speed = speed;
+    turtle.impl->speed = speed;
 }
 
-void Turtle_forward(Turtle *self, double length) {
-    struct Turtle_impl *d = self->impl;
+void turtleForward(Turtle turtle, double length) {
+    struct Turtle_impl *d = turtle.impl;
     double x = d->x + length * cos(d->angle * DEGREES_RATIO);
     double y = d->y - length * sin(d->angle * DEGREES_RATIO);
 
-    Turtle_goTo(self, x, y);
+    turtleGoTo(turtle, x, y);
 }
 
-void Turtle_turnLeft(Turtle *self, double angle) {
-    self->impl->angle += angle;
+void turtleTurnLeft(Turtle turtle, double angle) {
+    turtle.impl->angle += angle;
 }
 
-void Turtle_turnRight(Turtle *self, double angle) {
-    self->impl->angle -= angle;
+void turtleTurnRight(Turtle turtle, double angle) {
+    turtle.impl->angle -= angle;
 }
 
-void Turtle_goTo(Turtle *self, double x, double y) {
-    struct Turtle_impl *d = self->impl;
+void turtleGoTo(Turtle turtle, double x, double y) {
+    struct Turtle_impl *d = turtle.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne posuvat korytnacku");
     double dx = x - d->x;
     double dy = y - d->y;
