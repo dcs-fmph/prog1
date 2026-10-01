@@ -12,7 +12,7 @@ grafiku.
 ## Stiahnutie a použitie knižnice
 
 Stiahnite si nasledujúce dva súbory (kliknite na linku pravým tlačidlom a zvoľte Save Link As):
-- [SVGdraw.cpp](/prog1/programs/SVGdraw.cpp)
+- [SVGdraw.c](/prog1/programs/SVGdraw.c)
 - [SVGdraw.h](/prog1/programs/SVGdraw.h)
 
 Použitie knižnice
