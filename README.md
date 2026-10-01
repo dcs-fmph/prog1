@@ -7,6 +7,8 @@ Stránka predmetu Programovanie (1) v C/C++
 
 * Individual lectures and other text material are in folder [`notes`](./notes) in Markdown format wich is converted to html
 * Images, pdf files, zip files etc are in folder [`data`](./data)
+* Example programs, their inputs and outputs are in filder [`programs`](./programs)
+  * TODO: add a makefile for creating a markdown version of each program because otherwise we do not have highlighting, diacritics etc
 * File [`index.md`](./index.md) contains part of the main page but the schedule with links to lectures etc is created by macros in [`_includes/semester.html`](./_includes/semester.html) based on a data in file [`_data/semester.yaml`](./_data/semester.yaml)
 * Announcements displayed at the top of each page are written in file [`_data/notes.yml`](./_data/notes.yml)
 * Overall page layout is in [`_layouts/default.html`](./_layouts/default.html)
