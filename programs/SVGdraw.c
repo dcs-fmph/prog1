@@ -240,7 +240,7 @@ int drawText(Drawing drawing, double x, double y, const char* text,
     return addItem(d);
 }
 
-void startPolygon(Drawing drawing, double x, double y) {
+void drawPolygonStart(Drawing drawing, double x, double y) {
     drawing.impl->polygonCount = 0;
     drawPolygonAddPoint(drawing, x, y);
 }
