@@ -27,8 +27,9 @@ Použitie knižnice
 ## Ukážkové programy
 
 Ukážkové programy: 
-- [domček čiarami](/prog1/programs/domcek1.c) (vytvorí obrázok [`domcek1.svg`](/prog1/files/domcek1.svg))
-- [domček korytnačou grafikou](/prog1/programs/domcek2.c) (vytvorí obrázok [`domcek2.svg`](/prog`/files/domcek2.svg))
+- [domček čiarami](/prog1/programs/domcek1.c) (vytvorí obrázok [`domcek1.svg`](/prog1/programs/domcek1.svg))
+- [domček korytnačou grafikou](/prog1/programs/domcek2.c) (vytvorí obrázok [`domcek2.svg`](/prog1/programs/domcek2.svg))
+- [ďalšia ukážka](/prog1/programs/SVGukazka.c) (vytvorí obrázok [`SVGukazka.svg`](/prog1/programs/SVGukazka.svg) s rôznymi geometrickými útvarmi a textom)
 - príklady programov na [prednáške 5](./P5)
 
 ## Vykresľovanie v SVG formáte
