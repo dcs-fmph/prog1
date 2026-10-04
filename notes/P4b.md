@@ -7,7 +7,9 @@ title: Prednáška 4b
 
 ## Oznamy
 
-Čo nás čaká v najbližších dňoch
+- Dnes na cvičeniach papierová rozcvička, vzorové riešenia rozcvičky, možnosť spýtať sa k úlohám, ktoré majú termín do dnes večer.
+  - Papierová rozcvička sa bude týkať prednášok 1-3.
+- Utorok na cvičeniach programátorská rozcvička a ďalšie programátorské úlohy s termínom ďalší pondelok večer.
 
 ## Opakovanie
 
