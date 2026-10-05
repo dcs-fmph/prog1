@@ -1,5 +1,5 @@
 theme: minima
-exclude: [README.md]
+exclude: [README.md, programs/Makefile]
 
 # TODO: zmenit skolsky rok podla potreby
 title: 1-INF-127 Programovanie (1) v C/C++ 2026/27
