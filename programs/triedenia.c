@@ -94,12 +94,13 @@ void insertionSort(int a[], int n) {
     }
 }
 
+#define NMax 100
+
 int main(void) {
-    const int maxN = 100;
-    int a[maxN];
+    int a[NMax];
 
-    int n = readArray(a, maxN);
-
+    int n = readArray(a, NMax);
+    
     printArray(a, n);
     //insertionSort(a, n);
     //bubbleSort(a, n);
