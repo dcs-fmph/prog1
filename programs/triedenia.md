@@ -101,12 +101,12 @@ void insertionSort(int a[], int n) {
     }
 }
 
-#define NMax 100
+#define NMAX 100
 
 int main(void) {
-    int a[NMax];
+    int a[NMAX];
 
-    int n = readArray(a, NMax);
+    int n = readArray(a, NMAX);
     
     printArray(a, n);
     //insertionSort(a, n);
