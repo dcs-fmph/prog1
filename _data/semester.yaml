@@ -26,9 +26,8 @@ weeks:
     items:
       - {display: 1, type: notes, file: P4b, name: 'Prednáška 4b'}
       - {display: 0, type: notes, file: P5, name: 'Prednáška 5'}
-      - {display: 0, type: url, file: 'https://youtu.be/Uml5x1K8CJU', name: 'video s koncom prednášky'}
       - {display: 0, type: notes, file: SVGdraw, name: 'Grafická knižnica SVGdraw'}
-      - {display: 0, type: text, name: 'Cvičenia 3'}
+      - {display: 1, type: text, name: 'Cvičenia 3'}
      
   - date: '12.-18.10.'
     content: 'Eratostenovo sito, jednoduché triedenia, binárne vyhľadávanie, zložitosť, znaky, switch'
@@ -52,25 +51,26 @@ weeks:
       - {display: 0, type: notes, file: P11, name: 'Prednáška 11'}
       - {display: 0, type: text, name: 'Cvičenia 6'}
       - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1137, name: 'Miniprojekt'}
-      
+
+  # pondelok volno
   - date: '2.11.-8.11.'
-    content: 'Smerníky, dynamické polia, práca s dvojrozmernými údajmi'
+    content: 'Smerníky, dynamické polia'
     items: 
       - {display: 0, type: notes, file: P12, name: 'Prednáška 12'} 
-      - {display: 0, type: notes, file: P13, name: 'Prednáška 13'}
       - {display: 0, type: text, name: 'Cvičenia 7'}
       
   - date: '9.-15.11.'
-    content: 'Spájaný zoznam, hašovanie, práca s konzolou na spôsob jazyka C'
+    content: 'Práca s dvojrozmernými údajmi, spájaný zoznam, hašovanie'
     items:
+      - {display: 0, type: notes, file: P13, name: 'Prednáška 13'}
       - {display: 0, type: notes, file: P14, name: 'Prednáška 14'} 
-      - {display: 0, type: notes, file: P15, name: 'Prednáška 15'}
       - {display: 0, type: text, name: 'Cvičenia 8'}
       
-  # pondelok volno 
+  # utorok volno 
   - date: '16.-22.11.'
-    content: 'Textové súbory'
+    content: 'Textové súbory, úvod do jazyka C++'
     items:
+      - {display: 0, type: notes, file: P15, name: 'Prednáška 15'}
       - {display: 0, type: notes, file: P16, name: 'Prednáška 16'}
       - {display: 0, type: text, name: 'Cvičenia 9'}
       - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1151, name: 'Miniprojekt'}
@@ -82,6 +82,7 @@ weeks:
       - {display: 0, type: notes, file: P17, name: 'Prednáška 17'}
       - {display: 0, type: notes, file: P18, name: 'Prednáška 18'}
       - {display: 0, type: text, name: 'Cvičenia 10'}
+      
   - date: '30.11-6.12.'
     content: 'Binárne stromy, aritmetické výrazy'
     items: 
