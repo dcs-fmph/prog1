@@ -25,8 +25,8 @@ weeks:
     content: 'Struct, polia'
     items:
       - {display: 1, type: notes, file: P4b, name: 'Prednáška 4b'}
-      - {display: 0, type: notes, file: P5, name: 'Prednáška 5'}
-      - {display: 0, type: notes, file: SVGdraw, name: 'Grafická knižnica SVGdraw'}
+      - {display: 1, type: notes, file: P5, name: 'Prednáška 5'}
+      - {display: 1, type: notes, file: SVGdraw, name: 'Grafická knižnica SVGdraw'}
       - {display: 1, type: text, name: 'Cvičenia 3'}
      
   - date: '12.-18.10.'
