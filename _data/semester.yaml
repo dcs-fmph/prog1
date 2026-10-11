@@ -32,20 +32,20 @@ weeks:
   - date: '12.-18.10.'
     content: 'Eratostenovo sito, jednoduché triedenia, binárne vyhľadávanie, zložitosť, znaky, switch'
     items:
-      - {display: 0, type: notes, file: P6, name: 'Prednáška 6'} 
       - {display: 0, type: notes, file: P7, name: 'Prednáška 7'} 
+      - {display: 0, type: notes, file: P8, name: 'Prednáška 8'} 
       - {display: 0, type: text, name: 'Cvičenia 4'}
       - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1286, name: 'Miniprojekt'}
       
   - date: '19.-25.10.'
-    content: 'Reťazce, úvod do rekurzie'
+    content: 'Reťazce, súbory'
     items: 
-      - {display: 0, type: notes, file: P8, name: 'Prednáška 8'}
       - {display: 0, type: notes, file: P9, name: 'Prednáška 9'}
+      - {display: 0, type: notes, file: P10, name: 'Prednáška 10'}
       - {display: 0, type: text, name: 'Cvičenia 5'}
       
   - date: '26.10-1.11.'
-    content: 'Prehľadávanie s návratom, Mergesort, Quicksort'
+    content: 'Úvod do rekurzie, prehľadávanie s návratom'
     items:
       - {display: 0, type: notes, file: P10, name: 'Prednáška 10'}
       - {display: 0, type: notes, file: P11, name: 'Prednáška 11'}
@@ -54,13 +54,13 @@ weeks:
 
   # pondelok volno
   - date: '2.11.-8.11.'
-    content: 'Smerníky, dynamické polia'
+    content: 'Mergesort, Quicksort'
     items: 
       - {display: 0, type: notes, file: P12, name: 'Prednáška 12'} 
       - {display: 0, type: text, name: 'Cvičenia 7'}
       
   - date: '9.-15.11.'
-    content: 'Práca s dvojrozmernými údajmi, spájaný zoznam, hašovanie'
+    content: 'Smerníky, dynamické polia, práca s dvojrozmernými údajmi'
     items:
       - {display: 0, type: notes, file: P13, name: 'Prednáška 13'}
       - {display: 0, type: notes, file: P14, name: 'Prednáška 14'} 
@@ -68,7 +68,7 @@ weeks:
       
   # utorok volno 
   - date: '16.-22.11.'
-    content: 'Textové súbory, úvod do jazyka C++'
+    content: 'Spájaný zoznam, hašovanie, úvod do jazyka C++'
     items:
       - {display: 0, type: notes, file: P15, name: 'Prednáška 15'}
       - {display: 0, type: notes, file: P16, name: 'Prednáška 16'}
