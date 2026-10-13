@@ -33,9 +33,9 @@ weeks:
     content: 'Eratostenovo sito, jednoduché triedenia, binárne vyhľadávanie, zložitosť, znaky, switch'
     items:
       - {display: 1, type: notes, file: P7, name: 'Prednáška 7'} 
-      - {display: 0, type: notes, file: P8, name: 'Prednáška 8'} 
-      - {display: 0, type: text, name: 'Cvičenia 4'}
-      - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1286, name: 'Miniprojekt'}
+      - {display: 1, type: notes, file: P8, name: 'Prednáška 8'} 
+      - {display: 1, type: text, name: 'Cvičenia 4'}
+      - {display: 1, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1286, name: 'Miniprojekt'}
       
   - date: '19.-25.10.'
     content: 'Reťazce, súbory'
