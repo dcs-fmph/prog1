@@ -10,7 +10,7 @@ Pokyny
   - Prvý semestrálny test sa bude konať v stredu **28.10.2026 o 18:10** v
     posluchárňach F1 a F2 v trvaní 45 minút.
   - Prineste si písacie potreby a preukaz študenta.
-  - Rozsadenie bude na dverách posluchárne.
+  - Rozsadenie bude na dverách posluchárne. Príďte niekoľko minút vopred a čakajte, kým vás pustíme do miestnosti.
   - Vlastné papiere ani žiadne ďalšie pomôcky nie sú povolené. Mobily,
     hodinky a iné elektronické zariadenia musia byť vypnuté a odložené v
     taške.
@@ -38,6 +38,7 @@ Typy príkladov
 - Zitite, čo robí program alebo funkcia na určitom vstupe, prípadne popíšte čo robí všeobecne.
 - Nájdite vstup, pre ktorý dá funkcia určitý výstup.
 - Ktoré logické tvrdenia platia na určitom mieste programu (invarianty).
+- A iné príklady podobného charakteru.
 
 Sylabus
   
