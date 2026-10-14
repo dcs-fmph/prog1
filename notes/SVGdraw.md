@@ -82,3 +82,4 @@ korytnačky znázornený ako červený trojuholník a za sebou bude nechávať
     `turtleTurnRight` ju otočia.
   - Príkaz `turtleSetSpeed` umožňuje zmeniť rýchlosť korytnačky, aby sme
     lepšie videli, ako sa postupne hýbe.
+  - Príkaz `turtleFinish` ukončí vykresľovanie obrázku a uloží ho do súboru.
