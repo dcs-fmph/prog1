@@ -1,5 +1,5 @@
 ---
-title: Zimný semester, semestrálny test
+title: Zimný semester, druhý semestrálny test
 ---
 
 * TOC
