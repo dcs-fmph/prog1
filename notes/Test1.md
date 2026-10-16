@@ -46,15 +46,15 @@ Sylabus
   - Podmienky `if`, `else`, `switch`, `case`
   - Cykly `for`, `while`, príkaz `break`
   - Funkcie, parametre, návratové hodnoty, príkaz `return`
-  - Polia, struct
-  - Reťazce ako pole `char`-ov ukončené nulovým znakom, knižnica `<string.h>`, funkcie `strlen`, `strcpy`, `strcat`, `strcmp`
+  - Polia, `struct`
+  - Reťazec ako pole `char`-ov ukončené nulovým znakom, knižnica `<string.h>`, funkcie `strlen`, `strcpy`, `strcat`, `strcmp`
   - Základy vstupu a výstupu cez `printf`, `scanf` s `%d`, `%lf` resp. `%f`, `%c`, `%s`
   - Základy rekurzie z prednášky 11 (okrem fraktálov)
   - Pochopenie preberaných algoritmov: základné triedenia, binárne vyhľadávanie, Euklidov algoritmus, Eratostenovo sito, výpočet faktoriálu a Fibonacciho čísla.
 
 Na teste nebude
 
-- Detaily formátovania výstupu v `printf`, ako napr. počet desatinných miest, zarovnanie, medzery a pod.
+- Detaily formátovania výstupu v `printf`, ako napr. počet desatinných miest, zarovnanie a pod.
 - Práca so súbormi, funkcie ako `getc`, `fgets` a pod.
 - Knižnica `SVGdraw`
 
