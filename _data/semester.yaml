@@ -49,7 +49,7 @@ weeks:
     content: 'Úvod do rekurzie, prehľadávanie s návratom'
     items:
       - {display: 1, type: notes, file: P11, name: 'Prednáška 11'}
-      - {display: 0, type: notes, file: P12, name: 'Prednáška 12'}
+      - {display: 1, type: notes, file: P12, name: 'Prednáška 12'}
       - {display: 1, type: text, name: 'Cvičenia 6'}
       - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1137, name: 'Miniprojekt'}
 
