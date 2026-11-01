@@ -7,22 +7,6 @@ title: Prednáška 12
 
 ## Oznamy
 
-  - Druhý miniprojekt je zverejnený, odovzdávajte do štvrtka 20.11.
-    22:00.
-  - V stredu o 18:10 bude prvý semestrálny test v posluchárňach A a B.
-      - Trvanie testu 45 minút.
-      - Pokrýva učivo po prednášku 10 vrátane.
-      - Rozsadenie bude na dverách posluchárne.
-      - Prineste si ISIC a pero.
-      - Vlastné papiere ani žiadne ďalšie pomôcky nie sú povolené.
-        Mobily, hodinky a iné elektronické zariadenia musia byť vypnuté
-        a odložené v taške.
-      - Zákaz odpisovať od spolužiakov a komunikovať s inými osobami než
-        vyučujúcimi.
-      - Ak máte otázku k zadaniu prihláste sa, pokúsime sa vám pomôcť.
-        Nebudeme vám ale radiť, ako riešiť úlohy.
-      - Po opustení miestnosti nebude možné vrátiť sa a pokračovať v
-        písaní testu.
   - Dnes nová téma: smerníky a práca s pamäťou.
   - Zajtra na cvičeniach rozcvička z dnešnej prednášky.
   - Cvičenia v stredu sú dobrovoľné, nebude bonusová rozcvička.
@@ -34,8 +18,6 @@ title: Prednáška 12
   - Každý dielik má adresu (poradové číslo).
   - Ukazovateľ (resp. smerník alebo pointer) je premenná, ktorej hodnota
     je adresa iného dieliku pamäte.
-
-<!-- end list -->
 
   - Na obrázku je na adrese `24` uložená premenná `x` typu `int`, ktorej
     hodnota je 17.
