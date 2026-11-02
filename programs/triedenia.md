@@ -10,6 +10,8 @@ title: Program triedenia.c
 #include <stdio.h>
 #include <stdbool.h>
 
+#define NMAX 100
+
 int readArray(int a[], int maxSize) {
     /* Od užívateľa načíta počet vstupných čísel.
      * Potom načíta zadaný počet celých čísel a uloží ich do poľa a,
@@ -100,8 +102,6 @@ void insertionSort(int a[], int n) {
         a[kam] = prvok;
     }
 }
-
-#define NMAX 100
 
 int main(void) {
     int a[NMAX];
