@@ -6,24 +6,24 @@ title: Valgrind
 {:toc}
 
   - Jazyk C pri použití polí a smerníkov nekontroluje, či ich používame
-    správne
+    správne.
   - Chybou v programe sa nám teda ľahko môže stať, že čítame alebo
-    píšeme mimo alokovanej pamäte
-  - Takéto chyby sa niekedy ťažko hľadajú
+    píšeme mimo alokovanej pamäte.
+  - Takéto chyby sa niekedy ťažko hľadajú.
   - V Linuxe nám na hľadanie takýchto chýb pomôže nástroj
-    [valgrind](http://valgrind.org/), ktorý môžete použiť aj na skúške
+    [valgrind](http://valgrind.org/), ktorý môžete použiť aj na skúške.
   - Vo Windows môžete použiť [Dr. Memory](http://drmemory.org/)
 
 ## Spustenie programu v nástroji valgrind pri použití Kate
 
-  - Na príkazovom riadku v editore Kate spúšťate váš program príkazom
-    typu `./prog`, kde `prog.c` je meno vášho súboru
+  - Na príkazovom riadku spúšťate váš program príkazom
+    typu `./prog`, kde `prog.c` je meno vášho súboru.
   - Namiesto toho napíšete `valgrind ./prog`
   - Nástroj valgrind bude náš program pozorne sledovať a keď robí divné
-    veci v pamäti, vypíše nám o tom správu
+    veci v pamäti, vypíše nám o tom správu.
   - Aby boli tieto správy zrozumiteľnejšie (obsahovali čísla riadkov),
-    lepšie je skompilovať program s prepínačom -g
-  - Namiesto `make prog` teda napíšete 
+    lepšie je skompilovať program s prepínačom `-g`
+  - Napíšete teda príkaz typu
       - `gcc -g -Wall prog.c -o prog`
 
 ## Ukážky chýb a výsledok z valgrind
@@ -49,7 +49,7 @@ Valgrind vypíše okrem iného
 ==569288==    by 0x10916D: main (prog.c:4)
 ```
 
-Dôležitá informácia je, že chyba nastala na riadku 4 v programe prog.c
+Dôležitá informácia je, že chyba nastala na riadku 4 v programe `prog.c`
 
 ### Neinicializovaný smerník
 
@@ -76,7 +76,7 @@ int main() {
 
 ### Chybné odalokovanie
 
-Tento program sa pokúša odalokovať pamäť, ktorá nebola alokovaná
+Tento program sa pokúša odalokovať pamäť, ktorá nebola alokovaná.
 
 ```c
 #include <stdlib.h>
@@ -100,7 +100,7 @@ int main() {
 ```c
 #include <stdlib.h>
 int main(void) {
-    int *p = (int*)malloc(4 * sizeof(int));
+    int *p = malloc(4 * sizeof(int));
     for(int i = 0; i <= 4; i++) {
         p[i] = 100;
     }
@@ -130,7 +130,7 @@ ktoré je lokálne vo funkcii, ale valgrind si to nevšimne:
 int main(void) {
     int a[4] = {10, 20, 30, 40};
     int *p = a;
-    for(int i = 0; i <= 4; i++) {
+    for (int i = 0; i <= 4; i++) {
         p[i] = 100;
     }
 }
@@ -146,15 +146,16 @@ kde...
 
 Valgrind nám tiež môže pomôcť nájsť pamäť, ktorú sme alokovali cez `malloc`,
 ale zabudli odalokovať cez `free`.
-  - V programe nižšie máme dve volania `malloc`, ku ktorým chýba odalokovanie
+
+V programe nižšie máme dve volania `malloc`, ku ktorým chýba odalokovanie.
 
 ```c
 #include <stdlib.h>
 int main() {
     int n = 100;
-    int *a = (int*)malloc(n * sizeof(int));
-    double *b = (double*)malloc(sizeof(double));
-    for(int i = 0; i<n; i++) {
+    int *a = malloc(n * sizeof(int));
+    double *b = malloc(sizeof(double));
+    for (int i = 0; i < n; i++) {
         a[i] = i;
     }
 }
@@ -175,9 +176,9 @@ Valgrind vypíše
 ==569679== Rerun with --leak-check=full to see details of leaked memory
 ```
 
-  - Vidíme teda, že počas beho programu sa alokovali 2 kusy pamäte ale žiaden sa neodalokoval
-  - Podľa pokynov programu spustíme `valgrind --leak-check=full ./prog`
-  - Pribudne podrobnejší rozbor neodalokovanej pamäte
+- Vidíme teda, že počas beho programu sa alokovali 2 kusy pamäte ale žiaden sa neodalokoval
+- Podľa pokynov programu spustíme `valgrind --leak-check=full ./prog`
+- Pribudne podrobnejší rozbor neodalokovanej pamäte
 
 ```
 ==569728== HEAP SUMMARY:
@@ -193,12 +194,10 @@ Valgrind vypíše
 ==569728==    by 0x10916C: main (prog.c:4)
 ```
 
-
-
-  - valgrind nám teraz vypísal, na ktorom riadku je `malloc`, ku ktorému
-    nebol volaný `free` (riadky 4 a 5 v súbore `prog.c`)
-  - tu to vidíme ľahko aj bez valgrind, ale vo väčšom programe vám táto
-    informácia môže pomôcť
+- valgrind nám teraz vypísal, na ktorom riadku je `malloc`, ku ktorému
+  nebol volaný `free` (riadky 4 a 5 v súbore `prog.c`)
+- tu to vidíme ľahko aj bez valgrind, ale vo väčšom programe vám táto
+  informácia môže pomôcť
 
 ## Cvičenie
 
@@ -207,13 +206,14 @@ je v ňom zopár chýb. Skúste nájsť a opraviť chyby čítaním programu,
 použitím debugera, programu valgrind, prípadne si pridajte nejaké
 pomocné výpisy premenných.
 
-  - v programe valgrind je vždy dobré začať od prvej vypísanej chyby,
-    opraviť ju a spustiť valgrind znovu
+V programe valgrind je vždy dobré začať od prvej vypísanej chyby,
+opraviť ju a spustiť valgrind znovu,
 
 
 ```c
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void opakuj(char kam[], char co[], char kolko) {
     /* Funkcia dostane na vstupe retazec co a cislo kolko a nakopiruje ho tolkokrat
@@ -230,7 +230,7 @@ void opakuj(char kam[], char co[], char kolko) {
 
 int main(void) {
     char ahoj[4] = {'A', 'h', 'o', 'j'};
-    char vysledok[16];
+    char *vysledok = malloc(sizeof(char) * 16);
     opakuj(vysledok, ahoj, 4);
     printf("%s\n", vysledok);
 }
