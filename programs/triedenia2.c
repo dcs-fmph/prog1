@@ -6,6 +6,8 @@
 
 #define NMAX 100000
 
+// ------- Pomocné funkcie ----------
+
 void generateRandomArray(int a[], int n) {
     /* Vygeneruje n náhodných čísel a uloží ich do poľa a */
     srand(time(NULL));
@@ -36,14 +38,7 @@ void printArray(int a[], int n) {
     printf("\n");
 }
 
-
-void swap(int a[], int i, int j) {
-    /* Vymení hodnoty prvkov v poli a na pozíciách i a j. */
-    int tmp = a[i];
-    a[i] = a[j];
-    a[j] = tmp;
-}
-
+// ------- Triedenie vkladaním ----------
 
 void insertionsort(int a[], int n) {
     /* Triedenie vkladaním */
@@ -57,6 +52,8 @@ void insertionsort(int a[], int n) {
         a[kam] = prvok;
     }
 }
+
+// ------- Triedenie zločovaním ----------
 
 void merge(int a[], int left, int middle, int right) {
     /* Zlúčenie dvoch usporiadaných častí poľa a.
@@ -122,6 +119,15 @@ void mergesort(int a[], int left, int right) {
     merge(a, left, middle, right);
 }
 
+// ------- Quick Sort ----------
+
+void swap(int a[], int i, int j) {
+    /* Vymení hodnoty prvkov v poli a na pozíciách i a j. */
+    int tmp = a[i];
+    a[i] = a[j];
+    a[j] = tmp;
+}
+
 int partition(int a[], int left, int right) {
     /* Rozdelí pole a od pozície left po pozíciu right okolo pivotu.
      * Prvky menšie ako pivot budú naľavo, potom
@@ -140,7 +146,6 @@ int partition(int a[], int left, int right) {
     swap(a, left, lastSmaller);
     return lastSmaller;
 }
-
 
 void quicksort(int a[], int left, int right) {
     /* Triedenie QuickSort od pozície left
@@ -163,6 +168,7 @@ void quicksort(int a[], int left, int right) {
     quicksort(a, middle + 1, right);
 }
 
+// ------- Funkcia main ----------
 
 int main() {
     /* načítame alebo vygenerujeme dáta na triedenie */
@@ -191,6 +197,7 @@ int main() {
     /* premenné na ukladanie časov začiatku a konca triedenia */
     clock_t start1, end1, start2, end2, start3, end3;
 
+    /* triedime a meriame čas */
     start1 = clock();
     insertionsort(a1, n);
     end1 = clock();

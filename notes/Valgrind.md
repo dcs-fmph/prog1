@@ -14,7 +14,7 @@ title: Valgrind
     [valgrind](http://valgrind.org/), ktorý môžete použiť aj na skúške.
   - Vo Windows môžete použiť [Dr. Memory](http://drmemory.org/)
 
-## Spustenie programu v nástroji valgrind pri použití Kate
+## Spustenie programu v nástroji valgrind na príkazovom riadku
 
   - Na príkazovom riadku spúšťate váš program príkazom
     typu `./prog`, kde `prog.c` je meno vášho súboru.

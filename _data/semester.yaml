@@ -51,14 +51,14 @@ weeks:
       - {display: 1, type: notes, file: P11, name: 'Prednáška 11'}
       - {display: 1, type: notes, file: P12, name: 'Prednáška 12'}
       - {display: 1, type: text, name: 'Cvičenia 6'}
-      - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1137, name: 'Miniprojekt'}
+      - {display: 1, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1302, name: 'Miniprojekt'}
 
   # pondelok volno
   - date: '2.11.-8.11.'
     content: 'Mergesort, Quicksort'
     items: 
-      - {display: 0, type: notes, file: P13, name: 'Prednáška 13'}
-      - {display: 0, type: text, name: 'Cvičenia 7'}
+      - {display: 1, type: notes, file: P13, name: 'Prednáška 13'}
+      - {display: 1, type: text, name: 'Cvičenia 7'}
       
   - date: '9.-15.11.'
     content: 'Smerníky, dynamické polia, práca s dvojrozmernými údajmi'
