@@ -63,9 +63,9 @@ weeks:
   - date: '9.-15.11.'
     content: 'Smerníky, dynamické polia, práca s dvojrozmernými údajmi'
     items:
-      - {display: 0, type: notes, file: P14, name: 'Prednáška 14'}
+      - {display: 1, type: notes, file: P14, name: 'Prednáška 14'}
       - {display: 0, type: notes, file: P15, name: 'Prednáška 15'} 
-      - {display: 0, type: text, name: 'Cvičenia 8'}
+      - {display: 1, type: text, name: 'Cvičenia 8'}
       
   # utorok volno 
   - date: '16.-22.11.'
