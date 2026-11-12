@@ -39,3 +39,4 @@ manipulovať.
 Bez ohľadu na implementáciu samotného dynamického poľa už teda vieme
 napísať kostru programu, ktorý ho využíva, napríklad na výpis vstupu
 odzadu.
+
