@@ -8,7 +8,8 @@ SHELL := /bin/bash
 
 
 C := $(wildcard *.c)
-MD := $(patsubst %.c,%.md,$(C))
+CPP := $(wildcard *.cpp)
+MD := $(patsubst %.cpp,%.md,$(CPP)) $(patsubst %.c,%.md,$(C))
 
 all:  $(MD)
 
@@ -17,5 +18,13 @@ all:  $(MD)
 	echo -e "---\ntitle: Program $<\n---\n" > $@
 	echo -e "[Súbor na stiahnutie](./$<)\n" >> $@
 	echo '```c' >> $@
+	cat $< >> $@
+	echo '```' >> $@
+
+
+%.md: %.cpp
+	echo -e "---\ntitle: Program $<\n---\n" > $@
+	echo -e "[Súbor na stiahnutie](./$<)\n" >> $@
+	echo '```cpp' >> $@
 	cat $< >> $@
 	echo '```' >> $@
