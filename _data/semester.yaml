@@ -69,12 +69,11 @@ weeks:
       
   # utorok volno 
   - date: '16.-22.11.'
-    content: 'Spájaný zoznam, hašovanie, úvod do jazyka C++'
+    content: 'Úvod do jazyka C++, spájaný zoznam, hašovanie'
     items:
-      - {display: 0, type: notes, file: P16, name: 'Prednáška 16'}
+      - {display: 1, type: notes, file: P16, name: 'Prednáška 16'}
       - {display: 0, type: notes, file: P17, name: 'Prednáška 17'}
-      - {display: 0, type: text, name: 'Cvičenia 9'}
-      - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1151, name: 'Miniprojekt'}
+      - {display: 1, type: text, name: 'Cvičenia 9'}
       
   # streda volno, video s vyfarbovanim plus nerekurzivny quicksort 
   - date: '23.-29.11.'
@@ -83,6 +82,7 @@ weeks:
       - {display: 0, type: notes, file: P17, name: 'Prednáška 17'}
       - {display: 0, type: notes, file: P18, name: 'Prednáška 18'}
       - {display: 0, type: text, name: 'Cvičenia 10'}
+      - {display: 0, type: url, file: https://prog.dcs.fmph.uniba.sk/task/1151, name: 'Miniprojekt'}
       
   - date: '30.11-6.12.'
     content: 'Binárne stromy, aritmetické výrazy'
