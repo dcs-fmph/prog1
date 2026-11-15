@@ -62,7 +62,7 @@ void checkArg(int correct, const char *message) {
 static void pushPair(PairDD **arr, int *count, int *cap, double a, double b) {
     if (*count == *cap) {
         int newCap = (*cap == 0) ? 8 : (*cap * 2);
-        PairDD *tmp = realloc(*arr, (size_t) newCap * sizeof(PairDD));
+        PairDD *tmp = (PairDD *)realloc(*arr, (size_t) newCap * sizeof(PairDD));
         checkArg(tmp != NULL, "Nedostatok pamate");
         *arr = tmp;
         *cap = newCap;
@@ -86,7 +86,7 @@ static void initSVG(FILE *svg, double width, double height) {
     fprintf(svg, "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" ");
     fprintf(svg, " width=\"%gpx\" height=\"%gpx\">\n", width, height);
     fprintf(svg, "<rect x=\"0\" y=\"0\" width=\"%g\" height=\"%g\""
-                 " style=\"fill:white;stroke:lightgray;stroke-width:1;\" />\n\n",
+            " style=\"fill:white;stroke:lightgray;stroke-width:1;\" />\n\n",
             width, height);
 }
 
@@ -102,8 +102,8 @@ static int addItem(struct SVGdraw_impl *d);
 static int nextItemId(struct SVGdraw_impl *d);
 static void printStyle(struct SVGdraw_impl *d);
 
-Drawing drawingInit(int width, int height, const char* filename) {
-    struct SVGdraw_impl *d = malloc(sizeof(struct SVGdraw_impl));
+Drawing drawingInit(int width, int height, const char *filename) {
+    struct SVGdraw_impl *d = (SVGdraw_impl *)malloc(sizeof(struct SVGdraw_impl));
     checkArg(d != NULL, "Nedostatok pamate");
     d->itemTimes = NULL;
     d->itemTimesCount = 0;
@@ -117,7 +117,7 @@ Drawing drawingInit(int width, int height, const char* filename) {
     strcpy(d->fillColor, "none");
     d->fontSize = 12;
     d->lineWidth = 1;
-    
+
     d->svg = fopen(filename, "w");
     checkArg(d->svg != NULL, "Nepodarilo sa otvorit subor na zapis");
     initSVG(d->svg, width, height);
@@ -156,13 +156,13 @@ void drawingFinishWithoutDestroy(Drawing drawing) {
         double end = d->itemTimes[i].second;
         if (start > 0) {
             fprintf(d->svg, "<set xlink:href=\"#item%d\""
-                            " attributeName=\"visibility\" to=\"hidden\" "
-                            "begin=\"0s\" dur=\"%gs\" />\n", i, start);
+                    " attributeName=\"visibility\" to=\"hidden\" "
+                    "begin=\"0s\" dur=\"%gs\" />\n", i, start);
         }
         if (end >= 0) {
             fprintf(d->svg, "<set xlink:href=\"#item%d\""
-                            " attributeName=\"visibility\" to=\"hidden\" "
-                            "begin=\"%gs\" dur=\"indefinite\" />\n", i, end);
+                    " attributeName=\"visibility\" to=\"hidden\" "
+                    "begin=\"%gs\" dur=\"indefinite\" />\n", i, end);
         }
     }
 
@@ -221,12 +221,12 @@ int drawLine(Drawing drawing, double x1, double y1, double x2, double y2) {
     return addItem(d);
 }
 
-int drawText(Drawing drawing, double x, double y, const char* text,
-                     const char* justification) {
+int drawText(Drawing drawing, double x, double y, const char *text,
+             const char *justification) {
     struct SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<text id=\"item%d\" x=\"%g\" y=\"%g\" "
-                    "style=\"fill:%s;stroke-width:0pt;stroke:none;font-size:%gpt;",
+            "style=\"fill:%s;stroke-width:0pt;stroke:none;font-size:%gpt;",
             nextItemId(d), x, y, d->lineColor, d->fontSize);
     if (strchr(justification, 'l')) {
         fprintf(d->svg, "text-anchor:start;");
@@ -276,7 +276,7 @@ void setLineColorRGB(Drawing drawing, int r, int g, int b) {
     formatRGBColor(drawing.impl->lineColor, SVGDRAW_COLOR_MAX, r, g, b);
 }
 
-void setLineColor(Drawing drawing, const char* color) {
+void setLineColor(Drawing drawing, const char *color) {
     setColorString(drawing.impl->lineColor, color);
 }
 
@@ -284,7 +284,7 @@ void setFillColorRGB(Drawing drawing, int r, int g, int b) {
     formatRGBColor(drawing.impl->fillColor, SVGDRAW_COLOR_MAX, r, g, b);
 }
 
-void setFillColor(Drawing drawing, const char* color) {
+void setFillColor(Drawing drawing, const char *color) {
     const char *c = color;
     while ((*c) != 0) {
         checkArg(islower((unsigned char) *c), "Meno farby musi pozostavat iba z malych pismen");
@@ -322,9 +322,9 @@ static void printStyle(struct SVGdraw_impl *d) {
             d->lineColor, d->lineWidth, d->fillColor);
 }
 
-Turtle turtleInit(int width, int height, const char* filename,
-                 int x, int y, double angle) {
-    struct Turtle_impl *d = malloc(sizeof(struct Turtle_impl));
+Turtle turtleInit(int width, int height, const char *filename,
+                  int x, int y, double angle) {
+    struct Turtle_impl *d = (Turtle_impl *)malloc(sizeof(struct Turtle_impl));
     checkArg(d != NULL, "Nedostatok pamate");
     d->x = x;
     d->y = y;
@@ -332,13 +332,13 @@ Turtle turtleInit(int width, int height, const char* filename,
     d->pathLength = 0;
     d->speed = 100;
     d->isActive = 1;
-    
+
     d->svg = fopen(filename, "w");
     checkArg(d->svg != NULL, "Nepodarilo sa otvorit subor na zapis");
     initSVG(d->svg, width, height);
     fprintf(d->svg, "<path fill=\"none\" stroke=\"black\" id=\"turtlepath\"  d=\"");
     fprintf(d->svg, "M %g %g", d->x, d->y);
-    
+
     Turtle self;
     self.impl = d;
     return self;
@@ -355,8 +355,8 @@ void turtleFinishWithoutDestroy(Turtle turtle) {
     fprintf(d->svg, "  </animateMotion>\n");
     fprintf(d->svg, "</path>\n");
     fprintf(d->svg, "<set xlink:href=\"#turtle\" "
-                    "attributeName=\"visibility\" to=\"hidden\" "
-                    "begin=\"%gs\" dur=\"indefinite\" />\n\n", time);
+            "attributeName=\"visibility\" to=\"hidden\" "
+            "begin=\"%gs\" dur=\"indefinite\" />\n\n", time);
 
     fprintf(d->svg, "</svg>\n");
     fclose(d->svg);
