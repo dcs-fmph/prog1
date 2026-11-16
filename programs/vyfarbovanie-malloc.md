@@ -5,7 +5,8 @@ title: Program vyfarbovanie-malloc.c
 [Súbor na stiahnutie](./vyfarbovanie-malloc.c)
 
 ```c
-/* Program Vyfarbovanie z prednášky 17, verzia v jazyku C s alokáciou pomocou malloc.
+/* Program Vyfarbovanie z prednášky 19,
+ * verzia v jazyku C s alokáciou pomocou malloc.
  * Kompiluje s gcc aj g++. */
 #include "SVGdraw.h"
 #include <stdio.h>

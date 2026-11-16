@@ -5,7 +5,7 @@ title: Program vyfarbovanie-vector.cpp
 [Súbor na stiahnutie](./vyfarbovanie-vector.cpp)
 
 ```cpp
-/* Program Vyfarbovanie z prednášky 17, verzia s vectormi */
+/* Program Vyfarbovanie z prednášky 19, verzia s vectormi */
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>

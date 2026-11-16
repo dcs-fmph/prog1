@@ -5,7 +5,7 @@ title: Program vyfarbovanie-new.cpp
 [Súbor na stiahnutie](./vyfarbovanie-new.cpp)
 
 ```cpp
-/* Program Vyfarbovanie z prednášky 17, verzia s new a delete */
+/* Program Vyfarbovanie z prednášky 19, verzia s new a delete */
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>
