@@ -25,7 +25,7 @@ typedef struct {
 } PairDD;
 
 /* Hidden implementation of SVGdraw (opaque to callers). */
-struct SVGdraw_impl {
+typedef struct SVGdraw_impl {
     FILE *svg;
     PairDD *itemTimes;
     int itemTimesCount;
@@ -39,16 +39,16 @@ struct SVGdraw_impl {
     char fillColor[SVGDRAW_COLOR_MAX];
     double fontSize;
     double lineWidth;
-};
+} SVGdraw_impl;
 
 /* Hidden implementation of Turtle (opaque to callers). */
-struct Turtle_impl {
+typedef struct Turtle_impl {
     double x, y, angle;
     double pathLength;
     double speed;
     int isActive;
     FILE *svg;
-};
+} Turtle_impl;
 
 void checkArg(int correct, const char *message) {
     if (!correct) {
@@ -98,12 +98,12 @@ static void formatRGBColor(char *out, size_t outSize, int r, int g, int b) {
 }
 
 /* Forward declarations of the internal helpers used before their definition. */
-static int addItem(struct SVGdraw_impl *d);
-static int nextItemId(struct SVGdraw_impl *d);
-static void printStyle(struct SVGdraw_impl *d);
+static int addItem(SVGdraw_impl *d);
+static int nextItemId(SVGdraw_impl *d);
+static void printStyle(SVGdraw_impl *d);
 
 Drawing drawingInit(int width, int height, const char *filename) {
-    struct SVGdraw_impl *d = (SVGdraw_impl *)malloc(sizeof(struct SVGdraw_impl));
+    SVGdraw_impl *d = (SVGdraw_impl *)malloc(sizeof(SVGdraw_impl));
     checkArg(d != NULL, "Nedostatok pamate");
     d->itemTimes = NULL;
     d->itemTimesCount = 0;
@@ -132,7 +132,7 @@ void drawingWait(Drawing drawing, double time) {
 }
 
 void drawingClear(Drawing drawing) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     for (int i = 0; i < d->itemTimesCount; i++) {
         if (d->itemTimes[i].second < 0) {
             d->itemTimes[i].second = d->time;
@@ -141,14 +141,14 @@ void drawingClear(Drawing drawing) {
 }
 
 void drawingHideItem(Drawing drawing, int id) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(id >= 0 && id < d->itemTimesCount, "Zadane id pre hideItem neexistuje");
     checkArg(d->itemTimes[id].second < 0, "Objekt s danym id vo funkcii hideItem bol uz predtym skryty.");
     d->itemTimes[id].second = d->time;
 }
 
 void drawingFinishWithoutDestroy(Drawing drawing) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Funkciu finish je mozne volat iba raz");
 
     for (int i = 0; i < d->itemTimesCount; i++) {
@@ -173,7 +173,7 @@ void drawingFinishWithoutDestroy(Drawing drawing) {
 }
 
 void drawingDestroy(Drawing drawing) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     if (d == NULL) {
         return;
     }
@@ -192,7 +192,7 @@ void drawingFinish(Drawing drawing) {
 }
 
 int drawRectangle(Drawing drawing, double x, double y, double width, double height) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<rect id=\"item%d\" x=\"%g\" y=\"%g\" width=\"%g\" height=\"%g\" ",
             nextItemId(d), x, y, width, height);
@@ -202,7 +202,7 @@ int drawRectangle(Drawing drawing, double x, double y, double width, double heig
 }
 
 int drawEllipse(Drawing drawing, double x, double y, double rx, double ry) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<ellipse id=\"item%d\" cx=\"%g\" cy=\"%g\" rx=\"%g\" ry=\"%g\" ",
             nextItemId(d), x, y, rx, ry);
@@ -212,7 +212,7 @@ int drawEllipse(Drawing drawing, double x, double y, double rx, double ry) {
 }
 
 int drawLine(Drawing drawing, double x1, double y1, double x2, double y2) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<line id=\"item%d\" x1=\"%g\" y1=\"%g\" x2=\"%g\" y2=\"%g\" ",
             nextItemId(d), x1, y1, x2, y2);
@@ -223,7 +223,7 @@ int drawLine(Drawing drawing, double x1, double y1, double x2, double y2) {
 
 int drawText(Drawing drawing, double x, double y, const char *text,
              const char *justification) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     fprintf(d->svg, "<text id=\"item%d\" x=\"%g\" y=\"%g\" "
             "style=\"fill:%s;stroke-width:0pt;stroke:none;font-size:%gpt;",
@@ -253,12 +253,12 @@ void drawPolygonStart(Drawing drawing, double x, double y) {
 }
 
 void drawPolygonAddPoint(Drawing drawing, double x, double y) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     pushPair(&d->polygon, &d->polygonCount, &d->polygonCap, x, y);
 }
 
 int drawPolygonFinish(Drawing drawing) {
-    struct SVGdraw_impl *d = drawing.impl;
+    SVGdraw_impl *d = drawing.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne vykreslovat");
     checkArg(d->polygonCount > 2, "Polygon musi mat aspon 3 vrcholy");
     fprintf(d->svg, "<polygon id=\"item%d\" points=\"", nextItemId(d));
@@ -307,24 +307,24 @@ void setLineWidth(Drawing drawing, double width) {
     drawing.impl->lineWidth = width;
 }
 
-static int addItem(struct SVGdraw_impl *d) {
+static int addItem(SVGdraw_impl *d) {
     int n = d->itemTimesCount;
     pushPair(&d->itemTimes, &d->itemTimesCount, &d->itemTimesCap, d->time, -1);
     return n;
 }
 
-static int nextItemId(struct SVGdraw_impl *d) {
+static int nextItemId(SVGdraw_impl *d) {
     return d->itemTimesCount;
 }
 
-static void printStyle(struct SVGdraw_impl *d) {
+static void printStyle(SVGdraw_impl *d) {
     fprintf(d->svg, "style=\"stroke:%s;stroke-width:%g;fill:%s\"",
             d->lineColor, d->lineWidth, d->fillColor);
 }
 
 Turtle turtleInit(int width, int height, const char *filename,
                   int x, int y, double angle) {
-    struct Turtle_impl *d = (Turtle_impl *)malloc(sizeof(struct Turtle_impl));
+    Turtle_impl *d = (Turtle_impl *)malloc(sizeof(Turtle_impl));
     checkArg(d != NULL, "Nedostatok pamate");
     d->x = x;
     d->y = y;
@@ -345,7 +345,7 @@ Turtle turtleInit(int width, int height, const char *filename,
 }
 
 void turtleFinishWithoutDestroy(Turtle turtle) {
-    struct Turtle_impl *d = turtle.impl;
+    Turtle_impl *d = turtle.impl;
     checkArg(d != NULL && d->isActive, "Funkciu finish je mozne volat iba raz");
     double time = d->pathLength / d->speed;
     fprintf(d->svg, "\"/>\n\n");
@@ -365,7 +365,7 @@ void turtleFinishWithoutDestroy(Turtle turtle) {
 }
 
 void turtleDestroy(Turtle turtle) {
-    struct Turtle_impl *d = turtle.impl;
+    Turtle_impl *d = turtle.impl;
     if (d == NULL) {
         return;
     }
@@ -387,7 +387,7 @@ void turtleSetSpeed(Turtle turtle, double speed) {
 }
 
 void turtleForward(Turtle turtle, double length) {
-    struct Turtle_impl *d = turtle.impl;
+    Turtle_impl *d = turtle.impl;
     double x = d->x + length * cos(d->angle * DEGREES_RATIO);
     double y = d->y - length * sin(d->angle * DEGREES_RATIO);
 
@@ -403,7 +403,7 @@ void turtleTurnRight(Turtle turtle, double angle) {
 }
 
 void turtleGoTo(Turtle turtle, double x, double y) {
-    struct Turtle_impl *d = turtle.impl;
+    Turtle_impl *d = turtle.impl;
     checkArg(d != NULL && d->isActive, "Po zavolani funkcie finish uz nie je mozne posuvat korytnacku");
     double dx = x - d->x;
     double dy = y - d->y;
