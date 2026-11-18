@@ -38,7 +38,7 @@ void init(set &s, int m) {
 }
 
 /* Funkcia zistí, či prvok x patrí do množiny s. */
-bool contains(set &s, int x) {
+bool contains(const set &s, int x) {
     // spočítame políčko tabuľky
     int index = h(x, s.m);
     node *p = s.table[index];
