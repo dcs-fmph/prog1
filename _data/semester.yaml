@@ -72,7 +72,7 @@ weeks:
     content: 'Úvod do jazyka C++, spájaný zoznam, hašovanie'
     items:
       - {display: 1, type: notes, file: P16, name: 'Prednáška 16'}
-      - {display: 0, type: notes, file: P17, name: 'Prednáška 17'}
+      - {display: 1, type: notes, file: P17, name: 'Prednáška 17'}
       - {display: 1, type: text, name: 'Cvičenia 9'}
       
   # streda volno, video s vyfarbovanim plus nerekurzivny quicksort 

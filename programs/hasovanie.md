@@ -12,7 +12,7 @@ title: Program hasovanie.cpp
 
 /* hašovacia funkcia */
 int h(int x, int m) {
-    return abs(x) % m;
+    return std::abs(x) % m;
 }
 
 /* štruktúra reprezentujúca jeden prvok spájaného zoznamu */
