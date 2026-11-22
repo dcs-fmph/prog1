@@ -2,7 +2,7 @@
  *
  * Program načíta maticu zo súboru vyfarbovanie-vstup.txt
  * a animáciu uloží do súboru vyfarbovanie.svg.
- */   
+ */
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>

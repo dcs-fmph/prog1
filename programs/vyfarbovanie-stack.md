@@ -5,7 +5,7 @@ title: Program vyfarbovanie-stack.cpp
 [Súbor na stiahnutie](./vyfarbovanie-stack.cpp)
 
 ```cpp
-/* Program Vyfarbovanie z prednášky 19, verzia so zásbníkom.
+/* Program Vyfarbovanie z prednášky 19, verzia so zásobníkom.
  *
  * Program načíta maticu zo súboru vyfarbovanie-vstup.txt
  * a animáciu uloží do súboru vyfarbovanie-stack.svg.
@@ -104,7 +104,7 @@ void push(stack &s, dataType item) {
     tmp->data = item;
     tmp->next = s.top;
     s.top = tmp;
-} 
+}
 
 /* Odoberie prvok z vrchu zásobníka a vráti jeho hodnotu */
 dataType pop(stack &s) {
@@ -116,7 +116,7 @@ dataType pop(stack &s) {
     return result;
 }
 
-/* Vráti prvok na vrchu zásobníka, ale nechá ho tam */          
+/* Vráti prvok na vrchu zásobníka, ale nechá ho tam */
 dataType peek(const stack &s) {
     assert(!isEmpty(s));
     return s.top->data;
@@ -132,9 +132,9 @@ void destroy(stack &s) {
 const int deltaRiadok[4] = {0, 0, 1, -1};
 const int deltaStlpec[4] = {1, -1, 0, 0};
 
-/* Prefarbi suvislu jednofarebnu oblast obsahujucu 
- * poziciu (riadok,stlpec) na farbu s cislom farba. */  
-void vyfarbi(int **a, int m, int n, 
+/* Prefarbi suvislu jednofarebnu oblast obsahujucu
+ * poziciu (riadok,stlpec) na farbu s cislom farba. */
+void vyfarbi(int **a, int m, int n,
              int riadok, int stlpec, int farba,
              Drawing drawing) {
     int staraFarba = a[riadok][stlpec];
@@ -142,41 +142,41 @@ void vyfarbi(int **a, int m, int n,
         return;
     }
     a[riadok][stlpec] = farba;
-    vykresliStvorcek(riadok, stlpec, farby[farba], 
+    vykresliStvorcek(riadok, stlpec, farby[farba],
                      "brown", drawing);
     drawingWait(drawing, pauza);
     stack s;
     init(s);
-    
+
     policko p = {riadok, stlpec};
     push(s, p);
-    
+
     while (!isEmpty(s)) {
         p = pop(s);
-	vykresliStvorcek(p.riadok, p.stlpec, farby[farba], 
-			 "lightgrey", drawing);
-	drawingWait(drawing, pauza);
-	
+        vykresliStvorcek(p.riadok, p.stlpec, farby[farba],
+                         "lightgrey", drawing);
+        drawingWait(drawing, pauza);
+
         for (int i = 0; i < 4; i++) {
 
-            policko sused = {p.riadok + deltaRiadok[i], 
+            policko sused = {p.riadok + deltaRiadok[i],
                              p.stlpec + deltaStlpec[i]};
 
             if (sused.riadok >= 0 && sused.riadok < m
-                && sused.stlpec >= 0 && sused.stlpec < n
-                && a[sused.riadok][sused.stlpec] == staraFarba) {
+                    && sused.stlpec >= 0 && sused.stlpec < n
+                    && a[sused.riadok][sused.stlpec] == staraFarba) {
 
-                a[sused.riadok][sused.stlpec] = farba;                
+                a[sused.riadok][sused.stlpec] = farba;
                 push(s, sused);
 
-                vykresliStvorcek(sused.riadok, sused.stlpec, farby[farba], 
-                                "brown", drawing);
-		drawingWait(drawing, pauza);
+                vykresliStvorcek(sused.riadok, sused.stlpec, farby[farba],
+                                 "brown", drawing);
+                drawingWait(drawing, pauza);
             }
         }
     }
     destroy(s);
-} 
+}
 
 int main() {
     FILE *fin = fopen("vyfarbovanie-vstup.txt", "r");
