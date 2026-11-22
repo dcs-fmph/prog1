@@ -5,7 +5,12 @@ title: Program ostrovy.cpp
 [Súbor na stiahnutie](./ostrovy.cpp)
 
 ```cpp
-/* Program Počítanie ostrovov z prednášky 19 */
+/* Program Počítanie ostrovov z prednášky 19
+ *
+ * Program načíta maticu zo súboru ostrovy-vstup.txt
+ * a animáciu uloží do súboru ostrovy.svg.
+ */
+
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>

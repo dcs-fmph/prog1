@@ -7,7 +7,11 @@ title: Program vyfarbovanie-malloc.c
 ```c
 /* Program Vyfarbovanie z prednášky 19,
  * verzia v jazyku C s alokáciou pomocou malloc.
- * Kompiluje s gcc aj g++. */
+ * Kompiluje s gcc aj g++.
+ *
+ * Program načíta maticu zo súboru vyfarbovanie-vstup.txt
+ * a animáciu uloží do súboru vyfarbovanie.svg.
+ */
 #include "SVGdraw.h"
 #include <stdio.h>
 #include <assert.h>

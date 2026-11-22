@@ -1,4 +1,8 @@
-/* Program Vyfarbovanie z prednášky 19, verzia s vectormi */
+/* Program Vyfarbovanie z prednášky 19, verzia s vectormi
+ *
+ * Program načíta maticu zo súboru vyfarbovanie-vstup.txt
+ * a animáciu uloží do súboru vyfarbovanie.svg.
+ */   
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>

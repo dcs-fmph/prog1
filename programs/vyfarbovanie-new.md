@@ -5,7 +5,11 @@ title: Program vyfarbovanie-new.cpp
 [Súbor na stiahnutie](./vyfarbovanie-new.cpp)
 
 ```cpp
-/* Program Vyfarbovanie z prednášky 19, verzia s new a delete */
+/* Program Vyfarbovanie z prednášky 19, verzia s new a delete.
+ *
+ * Program načíta maticu zo súboru vyfarbovanie-vstup.txt
+ * a animáciu uloží do súboru vyfarbovanie.svg.
+ */
 #include "SVGdraw.h"
 #include <cstdio>
 #include <cassert>
