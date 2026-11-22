@@ -149,7 +149,7 @@ int partition(int a[], int left, int right) {
 
 void quicksort(int a[], int left, int right) {
     /* Triedenie QuickSort od pozície left
-       po pozíciu right  (vrátane)*/
+       po pozíciu right (vrátane) */
 
     // triviálny prípad: ak má pole najviac jeden prvok
     if (left >= right) {
